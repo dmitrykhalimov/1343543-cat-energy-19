@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="./css/normalize.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -25,7 +27,7 @@
               <a href="catalog.html">Каталог продукции</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Подобрать программу</a>
+              <a href="form.html">Подобор программы</a>
             </li>
           </ul>
         </div>
@@ -34,10 +36,14 @@
     <main class="page-main">
       <h1 class="visually-hidden">Cat Energy - Магазин функционального питания для котов</h1>
       <section class="promo">
-        <h2 class="promo__heading heading-black">Функциональное питание для котов</h2>
-        <p class="promo__text">Занялся собой? Займись котом</p>
-        <img src="https://via.placeholder.com/280x270" width="280" height="270" alt="Еда для кота с курицей">
-        <a class="button promo_button" href="form.html">Подобрать программу</a>
+        <div class="promo__wrapper-green">
+          <h2 class="promo__heading">Функциональное питание для котов</h2>
+          <p class="promo__text">Занялся собой? Займись котом</p>
+          <img src="https://via.placeholder.com/280x270" width="280" height="270" alt="Еда для кота с курицей">
+        </div>
+        <div class="promo__wrapper-white">
+          <a class="promo__button button button--promo" href="form.html">Подобрать программу</a>
+        </div>
       </section>
       <section class="promo-catalog">
         <ul class="promo-catalog__list">
@@ -93,7 +99,7 @@
           <div class="page-footer__map">
             <img src="https://via.placeholder.com/320x363" width="320px" height="363px" alt="Схема проезда"> <!-- вставить карту на JS-->
           </div>
-          <div class="page-footer__map">
+          <div class="page-footer__logo">
             <img src="https://via.placeholder.com/128x24" width="128" height="24" alt="Интернет-магазин «Кэт энерджи»">
           </div>
           <div class="page-footer__social social">
