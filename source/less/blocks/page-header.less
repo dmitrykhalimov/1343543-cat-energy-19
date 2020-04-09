@@ -1,7 +1,49 @@
 .page-header {
-  .outline(red); /* временная обводка */
+  margin: 0 auto;
+  .outline(blue);
+  display: flex;
+  flex-direction: column;
+  /*временно для сетки */
+  min-height: 264px;
+}
+
+@media (min-width: @tablet-width){
+  .page-header {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 708px;
+    /*временно для сетки */
+    min-height: 82px;
+  }
+}
+
+@media (min-width: @desktop-width){
+  .page-header {
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    /*временно для сетки */
+    min-height: 115px;
+  }
 }
 
 .page-header__logo:hover {
   opacity: 0.6;
+}
+/*
+.page-header__logo-container {
+  width: 320px;
+  height: 65px;
+  margin: 0 auto;
+  .outline(orange);
+}
+*/
+
+.page-header__logo-wrapper {
+  width: 280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .outline(green);
 }
