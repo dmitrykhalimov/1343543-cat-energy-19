@@ -13,17 +13,20 @@
     justify-content: space-between;
     width: 708px;
     /*временно для сетки */
-    min-height: 82px;
+    min-height: 79px;
+  }
+  .page-header__toggle-menu {
+    display: none;
   }
 }
 
 @media (min-width: @desktop-width){
   .page-header {
     flex-direction: row;
-    position: absolute;
-    width: 100%;
+
+    width: 1220px;
     /*временно для сетки */
-    min-height: 115px;
+    min-height: 113px;
   }
 }
 
@@ -46,4 +49,17 @@
   flex-direction: row;
   justify-content: space-between;
   .outline(green);
+}
+
+@media (min-width: @tablet-width){
+  .page-header__logo-wrapper {
+    width: 173px;
+    height: 100%;
+  }
+}
+
+@media (min-width: @desktop-width){
+  .page-header__logo-wrapper {
+    width: 202px;
+  }
 }
