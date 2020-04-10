@@ -1,20 +1,89 @@
 .how-it-works {
+  margin: 0 auto;
   background-color: #ffffff;
-  margin-top: 22px;
-  margin-left: 22px;
-  margin-right: 22px;
+  width: 280px;
+  .outline(yellow);
+  text-align: left;
+  min-height: 447px;
 }
 
 .how-it-works__title {
+  margin: 0;
+  padding: 0;
+
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 60px;
   color: @black;
-  margin: 0;
-  text-align: center;
+
+  min-height: 105px;
+
 }
 
 .how-it-works__list {
   list-style: none;
+  .list-reset;
+  .outline(purple);
+  min-height: 342px;
+
+}
+
+/* временный набросок, чтобы прикинуть размеры */
+.how-it-works__item {
+  margin-top: 28px;
+  margin-left: 80px;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: @green;
+    margin-left: -80px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .how-it-works {
+    width: 708px;
+    min-height: 782px;
+  }
+
+  .how-it-works__list {
+    /* временный набросок, чтобы прикинуть размеры */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 604px;
+
+  }
+  .how-it-works__item {
+    margin-top: 0;
+    width: 260px;
+  }
+  .how-it-works__title {
+    min-height: 178px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .how-it-works{
+    min-height: 432px;
+    width: 1220px;
+  }
+  .how-it-works__title {
+    min-height: 134px;
+  }
+  .how-it-works__list {
+    height: 298px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+  }
+  .how-it-works__item {
+    /* временный набросок, чтобы прикинуть размеры */
+    width: 245px;
+  }
 }
