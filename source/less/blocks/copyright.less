@@ -2,9 +2,29 @@
   background-color: @lightgray;
   font-size: 16px;
   line-height: 16px;
+  .outline(gray);
+  display: flex;
+  width: 280px;
+  height: 78px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .copyright__text {
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    min-width: 162px;
+    height: 37px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright {
+    min-width: 162px;
+    height: 37px;
+  }
 }

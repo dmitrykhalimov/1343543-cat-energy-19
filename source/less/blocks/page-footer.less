@@ -1,45 +1,89 @@
 .page-footer {
-  width: 320px;
   margin: 0 auto;
+  width: 320px;
+  height: 712px;
+
   .outline(purple);
 }
 
 .page-footer__contacts {
-  .outline(@green);
   margin: 0 auto;
+
+  .outline(@green);
 }
+
 .page-footer__logo {
+  box-sizing: border-box;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  width: 280px;
+  min-height: 91px;
+
+  text-align: center;
   background-color: @lightgray;
+  .outline(green);
 }
 
 .page-footer__map {
   padding: 0;
   margin: 0;
-  .outline(yellow);
-  /*временное решение - потом сделать карту*/
   width: 320px;
   height: 363px;
+
+  .outline(yellow);
+  /*временное решение - потом сделать карту*/
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 232px;
+
+  background-color: @lightgray;
+  .outline(tomato);
 }
 
 @media (min-width: @tablet-width) {
   .page-footer {
     width: 768px;
+    height: 748px;
   }
+
   .page-footer__map {
     width: 768px;
     height: 396px;
   }
 
+  .page-footer__wrapper {
+    margin: 0 auto;
+    width: 708px;
+    height: 148px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-footer__logo {
+    padding: 0;
+    width: 132px;
+    min-height: 24px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer {
     width: 1440px;
+    height: 551px;
     position: relative;
   }
+
   .page-footer__map {
     width: 1440px;
-    height: 492px;
+    height: 401px;
+  }
+
+  .page-footer__wrapper {
+    width: 1220px;
+    height: 150px;
   }
 }
-

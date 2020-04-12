@@ -3,35 +3,41 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link href="./css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
-      <div class="page-header__logo-wrapper">
-        <a href="index.html" class="page-header__logo">
-          <img src="https://via.placeholder.com/33x38" width="33" height="38" alt="Интернет-магазин «Кэт энерджи»">
-        </a>
-        <a href="index.html" class="page-header__logo">
-          <img src="https://via.placeholder.com/101x18" width="101" height="18" alt="Интернет-магазин «Кэт энерджи»">
-        </a>
-      </div>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a>Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">Подобрать программу</a>
-            </li>
-          </ul>
+    <div class = "page-header__container">
+      <header class="page-header">
+        <div class="page-header__logo-container">
+          <div class="page-header__logo-wrapper">
+              <a class="page-header__logo" href="#">
+                <img src="https://via.placeholder.com/33x38" width="33" height="38" alt="Интернет-магазин «Кэт энерджи»">
+              </a>
+              <a class="page-header__logo" href="#">
+                <img src="https://via.placeholder.com/101x18" width="101" height="18" alt="Интернет-магазин «Кэт энерджи»">
+              </a>
+              <button class="page-header__toggle-menu" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          </div>
         </div>
-      </nav>
-    </header>
+        <nav class="main-nav">
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item site-list__item--active">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="site-list__item">
+                <a>Каталог продукции</a>
+              </li>
+              <li class="site-list__item">
+                <a href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </div>
     <main class="page-main">
       <h1 class="page-main__title">Каталог продукции</h1>
       <section class="page-main__catalog main-catalog">

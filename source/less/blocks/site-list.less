@@ -1,15 +1,21 @@
 .site-list {
   .list-reset;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
 .site-list__item {
-  list-style: none;
+  /* временно, чтобы прикинуть работает ли */
+  height: 67px;
 
+  .outline(yellow);
+  list-style: none;
 }
 
 .site-list__item a {
   margin: 0;
+
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
@@ -23,35 +29,35 @@
   opacity: 0.6;
 }
 
-
-@media (min-width: @tablet-width){
+@media (min-width: @tablet-width) {
   .site-list {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between
-    ;
+    justify-content: space-between;
 
     /* временно для сетки */
     min-width: 439px;
     margin-top: 44px;
   }
+
+  .site-list__item {
+    height: auto;
+  }
+
   .site-list__item a {
     margin: 0;
     font-family: "Oswald", "Arial", sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     font-size: 18px;
-    line-height: 24,86px;
+    line-height: 24.86px;
     color: @black;
   }
-
 }
 
 @media (min-width: @desktop-width) {
   .site-list {
-
-  /* временно для сетки */
-  min-width: 480px;
-  margin-top: 78px;
+    /* временно для сетки */
+    min-width: 480px;
+    margin-top: 78px;
   }
 }
