@@ -1,6 +1,7 @@
 .promo-catalog {
-  width: 280px;
   margin: 0 auto;
+  width: 280px;
+
   text-align: center;
   .outline(tomato);
 }
@@ -13,11 +14,12 @@
 
 .promo-catalog__title,
 .promo-catalog__link {
+  margin: 0;
+
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   color: @black;
-  margin: 0;
 }
 
 .promo-catalog__title {
@@ -31,10 +33,10 @@
 }
 
 .promo-catalog__item {
-  list-style: none;
   margin-top: 22px;
-  background-color: @lightgray;
   min-height: 280px;
+  list-style: none;
+  background-color: @lightgray;
 }
 
 @media (min-width: @tablet-width) {
