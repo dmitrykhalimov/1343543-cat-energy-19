@@ -1,17 +1,21 @@
 .site-list {
-  margin: 0;
-  padding: 0;
-
+  .list-reset;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  .outline(green);
 }
 
 .site-list__item {
+  /* временно, чтобы прикинуть работает ли */
+  height: 67px;
+
+  .outline(yellow);
   list-style: none;
 }
 
 .site-list__item a {
   margin: 0;
+
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
@@ -23,4 +27,37 @@
 .site-list__item a:hover,
 .site-list__item a:focus {
   opacity: 0.6;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    flex-direction: row;
+    justify-content: space-between;
+
+    /* временно для сетки */
+    min-width: 439px;
+    margin-top: 44px;
+  }
+
+  .site-list__item {
+    height: auto;
+  }
+
+  .site-list__item a {
+    margin: 0;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 24.86px;
+    color: @black;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    /* временно для сетки */
+    min-width: 480px;
+    margin-top: 78px;
+  }
 }

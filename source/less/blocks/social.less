@@ -1,12 +1,24 @@
 .social {
-  background-color: @lightgray;
   margin: 0;
   padding: 0;
 }
 
 .social__list {
-  margin: 0;
-  padding: 0;
-  .outline(black);
+  .list-reset;
   list-style: none;
+  .outline(blue);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 280px;
+  height: 65px;
+}
+
+@media (min-width: @tablet-width) {
+  .social__list {
+    min-width: 128px;
+  }
 }

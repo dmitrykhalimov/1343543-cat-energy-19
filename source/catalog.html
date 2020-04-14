@@ -3,34 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="./css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__logo-wrapper">
-        <a href="index.html" class="page-header__logo">
-          <img src="https://via.placeholder.com/33x38" width="33" height="38" alt="Интернет-магазин «Кэт энерджи»">
-        </a>
-        <a href="index.html" class="page-header__logo">
-          <img src="https://via.placeholder.com/101x18" width="101" height="18" alt="Интернет-магазин «Кэт энерджи»">
-        </a>
-      </div>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a>Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">Подобрать программу</a>
-            </li>
-          </ul>
+      <div class = "page-header__container">
+        <div class="page-header__logo-container">
+          <div class="page-header__logo-wrapper">
+              <a class="page-header__logo" href="#">
+                <img src="https://via.placeholder.com/33x38" width="33" height="38" alt="Интернет-магазин «Кэт энерджи»">
+              </a>
+              <a class="page-header__logo" href="#">
+                <img src="https://via.placeholder.com/101x18" width="101" height="18" alt="Интернет-магазин «Кэт энерджи»">
+              </a>
+              <button class="page-header__toggle-menu" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          </div>
         </div>
-      </nav>
+        <nav class="main-nav">
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="site-list__item site-list__item--active">
+                <a>Каталог продукции</a>
+              </li>
+              <li class="site-list__item">
+                <a href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
     </header>
     <main class="page-main">
       <h1 class="page-main__title">Каталог продукции</h1>
@@ -198,12 +202,14 @@
             </table>
             <a href="#" class="main-catalog__button">Заказать</a>
           </li>
+          <li class="main-catalog__item">
+            <b class="main-catalog__expand-title">Показать еще 100500 товаров</b>
+            <p class="main-catalog__expand-text">На самом деле вкусов гораздо больше!</p>
+            <a href="#" class="main-catalog__show-button">Показать все</a>
+          </li>
         </ul>
-        <a href="#" class="main-catalog__expand">Заказать</a>
-        <b class="main-catalog__expand-title">Показать еще 100500 товаров</b>
-        <p class="main-catalog__expand-text">На самом деле вкусов гораздо больше!</p>
-        <a href="#" class="main-catalog__show-button">Показать все</a>
       </section>
+
       <section class="additional-catalog">
         <h2 class="visually-hidden">Дополнительная продукция</h1>
         <ul class="additional-catalog__list">
@@ -254,15 +260,16 @@
         <p class="gift-text">Закажите все и получите чехол для кота в подарок!</p>
       </section>
     </main>
+
     <footer class="page-footer">
+      <div class="page-footer__contacts contacts contacts--main">
+        <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
+        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class = "contacts__margin">Санкт-Петербург</span></p>
+      </div>
+      <div class="page-footer__map">
+        <img src="https://via.placeholder.com/320x363" width="320px" height="363px" alt="Схема проезда"> <!-- вставить карту на JS-->
+      </div>
       <div class="page-footer__wrapper">
-        <div class="page-footer__contacts contacts contacts--catalog">
-          <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
-          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        </div>
-        <div class="page-footer__map">
-          <img src="https://via.placeholder.com/320x363" width="320px" height="363px" alt="Схема проезда"> <!-- вставить карту на JS-->
-        </div>
         <div class="page-footer__logo">
           <img src="https://via.placeholder.com/128x24" width="128" height="24" alt="Интернет-магазин «Кэт энерджи»">
         </div>
@@ -272,7 +279,7 @@
               <a class="social__link social__link--vkontakte" href="#">Вконтакте</a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagramm" href="#">Instagram</a>
+              <a class="social__link social__link--instagram" href="#">Instagram</a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="#">Facebook</a>
@@ -281,7 +288,7 @@
         </div>
         <div class="page-footer__copyright copyright">
             <p class="copyright__text">HTML Academy</p>
-            <a class="copyright__logo" href ="#">HTML Academy</a>
+            <a class="copyright__logo" href="#">HTML Academy</a>
         </div>
       </div>
     </footer>

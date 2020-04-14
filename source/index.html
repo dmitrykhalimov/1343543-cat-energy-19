@@ -4,36 +4,37 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="format-detection" content="telephone=no">
     <link href="./css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
-      <div class="page-header__logo-wrapper">
-        <a class="page-header__logo" href="#">
-          <img src="https://via.placeholder.com/33x38" width="33" height="38" alt="Интернет-магазин «Кэт энерджи»">
-        </a>
-        <a class="page-header__logo" href="#">
-          <img src="https://via.placeholder.com/101x18" width="101" height="18" alt="Интернет-магазин «Кэт энерджи»">
-        </a>
-      </div>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a>Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">Подобор программы</a>
-            </li>
-          </ul>
+      <header class="page-header">
+        <div class = "page-header__container page-header__container--main">
+          <button class="page-header__toggle-menu" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <div class="page-header__logo-wrapper">
+              <a class="page-header__logo" href="#">
+                <img src="https://via.placeholder.com/33x38" width="33" height="38" alt="Интернет-магазин «Кэт энерджи»">
+              </a>
+              <a class="page-header__logo" href="#">
+                <img src="https://via.placeholder.com/101x18" width="101" height="18" alt="Интернет-магазин «Кэт энерджи»">
+              </a>
+          </div>
+          <nav class="main-nav">
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list site-list">
+                <li class="site-list__item site-list__item--active">
+                  <a>Главная</a>
+                </li>
+                <li class="site-list__item">
+                  <a href="catalog.html">Каталог продукции</a>
+                </li>
+                <li class="site-list__item">
+                  <a href="form.html">Подбор программы</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
-      </nav>
-    </header>
+      </header>
     <main class="page-main">
       <h1 class="visually-hidden">Cat Energy - Магазин функционального питания для котов</h1>
       <section class="promo">
@@ -63,10 +64,10 @@
       <section class="how-it-works">
         <h2 class="how-it-works__title">Как это работает</h2>
         <ul class="how-it-works__list">
-          <li class="how_it_works__item how_it_works__item--natural">Функциональное питание содержит только полезные питательные вещества.</li>
-          <li class="how_it_works__item how_it_works__item--sublime">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
-          <li class="how_it_works__item how_it_works__item--change">Замените один-два приема обычной еды на наше функциональное питание.</li>
-          <li class="how_it_works__item how_it_works__item--month">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+          <li class="how-it-works__item how-it-works__item--natural">Функциональное питание содержит только полезные питательные вещества.</li>
+          <li class="how-it-works__item how-it-works__item--sublime">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
+          <li class="how-it-works__item how-it-works__item--change">Замените один-два приема обычной еды на наше функциональное питание.</li>
+          <li class="how-it-works__item how-it-works__item--month">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
         </ul>
       </section>
       <section class="example">
@@ -91,15 +92,16 @@
         </div>
       </section>
       </main>
+
       <footer class="page-footer">
+        <div class="page-footer__contacts contacts contacts--main">
+          <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
+          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class = "contacts__margin">Санкт-Петербург</span></p>
+        </div>
+        <div class="page-footer__map">
+          <img src="https://via.placeholder.com/320x363" width="320px" height="363px" alt="Схема проезда"> <!-- вставить карту на JS-->
+        </div>
         <div class="page-footer__wrapper">
-          <div class="page-footer__contacts contacts contacts--main">
-            <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
-            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-          </div>
-          <div class="page-footer__map">
-            <img src="https://via.placeholder.com/320x363" width="320px" height="363px" alt="Схема проезда"> <!-- вставить карту на JS-->
-          </div>
           <div class="page-footer__logo">
             <img src="https://via.placeholder.com/128x24" width="128" height="24" alt="Интернет-магазин «Кэт энерджи»">
           </div>

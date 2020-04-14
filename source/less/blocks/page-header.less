@@ -1,7 +1,97 @@
 .page-header {
-  .outline(red); /* временная обводка */
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  /*временно для сетки */
+  min-height: 264px;
+
+  .outline(blue);
+}
+
+.page-header__container {
+  display: flex;
+  flex-direction: column;
+
+  .outline(rgb(73, 250, 241));
+}
+
+.page-header__logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  width: 280px;
+  height: 65px;
+
+  .outline(green);
+}
+
+.page-header__logo {
+  margin-right: 20px;
 }
 
 .page-header__logo:hover {
   opacity: 0.6;
+}
+
+/*заглушка на кнопку*/
+.page-header__toggle-menu {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  width: 18px;
+  height: 18px;
+
+  background-color: orange;
+  cursor: pointer;
+  border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    width: 100%;
+    /*временно для сетки */
+    min-height: 79px;
+  }
+
+  .page-header__container {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 708px;
+  }
+
+  .page-header__toggle-menu {
+    display: none;
+  }
+
+  .page-header__logo-wrapper {
+    margin: 0;
+    width: 173px;
+    height: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: 100%;
+    min-height: 0;
+  }
+
+  .page-header__logo-wrapper {
+    width: 202px;
+  }
+
+  .page-header__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1220px;
+    min-height: 115px;
+  }
+
+  .page-header__container--main {
+    position: absolute;
+    left: 110px;
+  }
 }

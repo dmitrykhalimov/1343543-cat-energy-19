@@ -1,12 +1,41 @@
 .page-main {
-  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  .outline(gray);
 }
 
 .page-main__title {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-weight: 400;
+  .list-reset;
+  display: inline-block;
+  padding-top: 12px;
+  padding-left: 20px;
+  padding-bottom: 15px;
+  width: 300px;
   font-size: 36px;
   line-height: 60px;
-  margin-top: 21px;
-  color: @black;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  text-align: left;
+  .outline(orange);
+}
+
+@media (min-width: @tablet-width) {
+  .page-main {
+    width: 100%;
+  }
+
+  .page-main__title {
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main {
+    width: 100%;
+  }
+
+  .page-main__title {
+    padding-left: 110px;
+  }
 }
