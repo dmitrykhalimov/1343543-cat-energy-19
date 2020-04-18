@@ -6,16 +6,20 @@
 }
 
 .site-list__item {
-  /* временно, чтобы прикинуть работает ли */
-  height: 67px;
+  display: flex;
+  height: 65px;
 
-  .outline(yellow);
+  border-top: 1px solid @grayline;
+  /*.outline(yellow); */
   list-style: none;
 }
 
-.site-list__item a {
-  margin: 0;
+.site-list__item:nth-child(3) {
+  border-bottom: 1px solid @grayline;
+}
 
+.site-list__item a {
+  margin: auto auto;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
@@ -24,23 +28,31 @@
   color: @black;
 }
 
-.site-list__item a:hover,
-.site-list__item a:focus {
+.site-list__item a[href]:hover {
   opacity: 0.6;
+}
+
+.site-list__item a[href]:active {
+  opacity: 0.3;
+}
+
+.site-list__item--active a {
+  position: relative;
 }
 
 @media (min-width: @tablet-width) {
   .site-list {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-
-    /* временно для сетки */
-    min-width: 439px;
-    margin-top: 44px;
+    /*.outline(tomato); */
+    width: 440px;
+    margin-bottom: 16px;
   }
 
   .site-list__item {
     height: auto;
+    border: none;
   }
 
   .site-list__item a {
@@ -52,12 +64,39 @@
     line-height: 24.86px;
     color: @black;
   }
+
+  .site-list__item:nth-child(3) {
+    border-bottom: none;
+  }
+
+  .site-list__item--active a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 32px;
+    height: 2px;
+    z-index: 2;
+    background-color: #68b738;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .site-list {
     /* временно для сетки */
-    min-width: 480px;
-    margin-top: 78px;
+    min-width: 479px;
+    margin-top: 70px;
+
+  }
+
+  .site-list__item a {
+    font-size: 20px;
+    line-height: 24.86px;
+    color: @white;
+  }
+
+  .site-list__item--active a::after{
+    background-color: @white;
   }
 }
