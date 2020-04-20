@@ -8,12 +8,13 @@
 .social__list {
   .list-reset;
   box-sizing: border-box;
-  margin: 0 auto;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
+  margin: 0 auto;
   padding-top: 10px;
 
   width: 47.88%;
@@ -21,18 +22,18 @@
 
   list-style: none;
   /*.outline(blue);*/
-
 }
 
 .social__link {
   box-sizing: border-box;
-  &--instagram{
+
+  &--instagram {
     padding-right: 3px;
   }
-  &--facebook{
+
+  &--facebook {
     padding-right: 9px;
   }
-
 }
 
 .social__link svg {
@@ -42,6 +43,7 @@
 @media (min-width: @tablet-width) {
   .social {
     width: 130px;
+
     border-bottom: 0;
   }
 
@@ -49,18 +51,23 @@
     &--vkontakte svg {
       margin: 0;
       padding-right: 10px;
+
       width: 30px;
       height: 16px;
     }
+
     &--instagram svg {
       margin: 0;
       padding: 0;
+
       width: 23px;
       height: 23px;
     }
+
     &--facebook svg {
       margin: 0;
       padding: 0;
+
       width: 14px;
       height: 28px;
     }
@@ -68,6 +75,5 @@
 
   .social__list {
     min-width: 100%;
-
   }
 }

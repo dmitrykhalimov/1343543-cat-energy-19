@@ -2,11 +2,13 @@
   .list-reset;
   display: flex;
   flex-direction: column;
+
   text-align: center;
 }
 
 .site-list__item {
   display: flex;
+
   height: 65px;
 
   border-top: 1px solid @grayline;
@@ -20,12 +22,12 @@
 
 .site-list__item a {
   margin: auto auto;
+
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   font-size: 20px;
   line-height: 20px;
-  color: @black;
 }
 
 .site-list__item a[href]:hover {
@@ -45,18 +47,23 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    /*.outline(tomato); */
-    width: 440px;
+
     margin-bottom: 16px;
+
+    width: 440px;
+
+    /*.outline(tomato); */
   }
 
   .site-list__item {
     height: auto;
+
     border: none;
   }
 
   .site-list__item a {
     margin: 0;
+
     font-family: "Oswald", "Arial", sans-serif;
     font-weight: 400;
     text-transform: uppercase;
@@ -76,7 +83,9 @@
     left: 0;
     right: 0;
     top: 32px;
+
     height: 2px;
+
     z-index: 2;
     background-color: #68b738;
   }
@@ -84,19 +93,23 @@
 
 @media (min-width: @desktop-width) {
   .site-list {
-    /* временно для сетки */
-    min-width: 479px;
     margin-top: 70px;
 
+    min-width: 479px;
   }
 
   .site-list__item a {
     font-size: 20px;
     line-height: 24.86px;
+    color: @black;
+  }
+
+  .site-list--main a {
     color: @white;
   }
 
-  .site-list__item--active a::after{
+  /*нет времени думать, заменить потом на нормальный селктор */
+  .site-list--main .site-list__item--active a::after {
     background-color: @white;
   }
 }

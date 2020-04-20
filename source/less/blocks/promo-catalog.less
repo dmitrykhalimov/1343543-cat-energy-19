@@ -7,6 +7,7 @@
 
 .promo-catalog__list {
   .list-reset;
+
   display: flex;
   flex-direction: column;
 }
@@ -23,13 +24,22 @@
 
 .promo-catalog__item {
   position: relative;
+  box-sizing: padding-box;
+
+  margin-top: 22px;
+
+  min-height: 265px;
+
+  list-style: none;
+  background-color: @lightgray;
   text-align: left;
 }
 
 .promo-catalog__title {
-  text-align: left;
   padding-left: 91px;
   padding-top: 29px;
+
+  text-align: left;
   font-size: 24px;
   line-height: 37.02px;
 }
@@ -40,11 +50,14 @@
   left: 12px;
   top: 14px;
   content: "";
+
   width: 50px;
   height: 50px;
+
   padding: 10px;
+
   background: url("../../img/icon-cat-slim.svg") no-repeat,
-              @green;
+    @green;
   background-size: 36px auto, 10px 10px;
   border-radius: 50px;
   background-clip: padding-box, content-box;
@@ -52,16 +65,21 @@
 }
 
 .promo-catalog__item--gain .promo-catalog__title::before {
+  content: "";
+
   position: absolute;
   display: block;
   left: 12px;
   top: 14px;
-  content: "";
+
+  padding: 10px;
+
   width: 50px;
   height: 50px;
-  padding: 10px;
+
+
   background: url("../../img/icon-cat-pro.svg") no-repeat,
-              @green;
+    @green;
   background-size: 67px auto, 10px 10px;
   border-radius: 50px;
   background-clip: padding-box, content-box;
@@ -69,32 +87,26 @@
 }
 
 .promo-catalog__link {
+  position: relative;
+  display: block;
+
+  padding-top: 19px;
+  padding-left: 19px;
+
   font-size: 16px;
   line-height: 16px;
 }
 
-.promo-catalog__item {
-  box-sizing: padding-box;
-  margin-top: 22px;
-  min-height: 265px;
-  list-style: none;
-  background-color: @lightgray;
-}
-
 .promo-catalog__description {
   display: block;
-  text-align: left;
+
   padding-top: 15px;
   padding-left: 20px;
   padding-right: 20px;
-  min-height: 98px;
-}
 
-.promo-catalog__link {
-  position: relative;
-  display: block;
-  padding-top: 19px;
-  padding-left: 19px;
+  min-height: 98px;
+
+  text-align: left;
 }
 
 .promo-catalog__link svg {
@@ -108,9 +120,12 @@
   position: absolute;
   left: 20px;
   right: 20px;
-  top: 0px;
+  top: 0;
+
   height: 1px;
+
   z-index: 2;
+
   background-color: #d9d9d9;
 }
 
@@ -121,39 +136,48 @@
   }
 
   .promo-catalog__title {
-    font-size: 36px;
-    line-height: 37.02px;
     padding-top: 75px;
     padding-left: 53px;
+
+    font-size: 36px;
+    line-height: 37.02px;
   }
 
   .promo-catalog__item:nth-child(1) .promo-catalog__description {
-    font-size: 16px;
-    line-height: 24px;
     padding-left: 52px;
     padding-top: 10px;
     padding-right: 275px;
+
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .promo-catalog__item:nth-child(2) .promo-catalog__description {
-    font-size: 16px;
-    line-height: 24px;
     padding-left: 52px;
     padding-top: 10px;
     padding-right: 312px;
+
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .promo-catalog__item {
     margin-bottom: 10px;
+    margin-top: 0;
+
+    min-height: 372px;
   }
 
   .promo-catalog__item--lose .promo-catalog__title::before {
     left: auto;
     right: 37px;
     top: 67px;
+
+    padding: 25px;
+
     width: 200px;
     height: 200px;
-    padding: 25px;
+
     background-size: 140px auto, 10px 10px;
     border-radius: 200px;
     background-position: 50% 22%;
@@ -163,27 +187,27 @@
     left: auto;
     right: 15px;
     top: 46px;
+
+    padding: 45px;
+
     width: 200px;
     height: 200px;
-    padding: 45px;
+
     background-size: 270px auto, 10px 10px;
     border-radius: 200px;
     background-position: 42% 50%;
   }
 
-  .promo-catalog__item {
-    margin-top: 0;
-    min-height: 372px;
-  }
-
   .promo-catalog__item:nth-child(2) {
     margin-top: 20px;
   }
+
   .promo-catalog__link {
-    font-size: 20px;
-    line-height: 20px;
     padding-top: 38px;
     padding-left: 52px;
+
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .promo-catalog__link svg {
@@ -209,6 +233,7 @@
   .promo-catalog__list {
     flex-direction: row;
     justify-content: space-between;
+
     margin-top: 8px;
   }
 
@@ -237,9 +262,12 @@
     left: 27px;
     right: auto;
     top: 22px;
+
+    padding: 25px;
+
     width: 100px;
     height: 100px;
-    padding: 25px;
+
     background-size: 70px auto, 10px 10px;
     background-position: 49% 35%;
   }
@@ -248,9 +276,12 @@
     left: 7px;
     right: auto;
     top: 2px;
+
+    padding: 45px;
+
     width: 100px;
     height: 100px;
-    padding: 45px;
+
     background-size: 135px auto, 10px 10px;
     border-radius: 100px;
     background-position: 49% 50%;
@@ -260,7 +291,8 @@
   .promo-catalog__list .promo-catalog__item {
     margin-top: 0;
     margin-bottom: 0;
-    min-height: 372px;
+
     width: 570px;
+    min-height: 372px;
   }
 }
