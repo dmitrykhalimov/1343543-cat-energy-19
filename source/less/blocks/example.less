@@ -1,0 +1,431 @@
+.example {
+  margin: 0 auto;
+
+  width: 100%;
+  min-height: 705px;
+  /* .outline(purple); */
+  background-color: @lightgray;
+}
+
+.example__title {
+  box-sizing: border-box;
+
+  margin: 0 auto;
+  padding-top: 16px;
+
+  min-height: 99px;
+  width: 87.5%;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 36px;
+  line-height: 60px;
+  color: @black;
+
+  /* .outline(green); */
+  background-color: @lightgray;
+}
+
+.example__food-stats {
+  margin: 0 auto;
+
+  width: 87.5%;
+}
+
+.example__text {
+  .list-reset;
+
+  display: block;
+
+  padding-right: 5px;
+
+  min-height: 108px;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: @lightgray;
+  /* .outline(blue); */
+}
+
+.example__list {
+  .list-reset;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  min-height: 100px;
+
+  list-style: none;
+  /* .outline(yellow); */
+  background-color: @lightgray;
+}
+
+.example__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  margin-top: 25px;
+  padding-top: 13px;
+
+  height: 41px;
+  width: 122px;
+
+  border: 1px solid #cfcfcf;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.example__result-num {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 24px;
+  color: @black;
+}
+
+.example__result-text {
+  position: absolute;
+  top: 46px;
+  left: 26px;
+
+  margin: 0;
+  padding: 0;
+
+  font-weight: 400;
+  text-transform: none;
+  font-size: 12px;
+  line-height: 12px;
+  color: @black;
+  width: 68px;
+  background-color: @lightgray;
+}
+
+.example__text-summarize {
+  .list-reset;
+  display: block;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding-top: 15px;
+
+  min-height: 50px;
+
+  text-align: center;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+  color: @black;
+  background-color: @lightgray;
+  /* .outline(tomato); */
+}
+
+.example__catchange {
+  margin: 0 auto;
+
+  min-height: 340px;
+  width: 100%;
+
+  background-color: @lightgray;
+  /* .outline(orange); */
+}
+
+.example__catchange img {
+  display: block;
+
+  margin: 0 auto;
+  padding-top: 20px;
+
+  /* .outline(lightseagreen); */
+}
+
+.example__slider-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  margin: 0 auto;
+  padding-top: 38px;
+
+  text-align: center;
+  width: 194px;
+}
+
+.example__slider {
+  position: relative;
+
+  padding-top: 3px;
+  padding-left: 3px;
+}
+
+.example__slider::before {
+  content: "";
+  display: inline-block;
+
+  box-sizing: border-box;
+
+  width: 84px;
+  height: 14px;
+
+  background-color: @white;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+}
+
+.example__slider::after {
+  position: absolute;
+  display: block;
+
+  content: "";
+  top: 7px;
+  left: 9px;
+
+  width: 35px;
+  height: 6px;
+
+  background-color: #68b738;
+  border-radius: 6px;
+}
+
+.example__catchange-text {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  color: @black;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    background-color: @white;
+  }
+
+  .example__title {
+    padding-top: 12px;
+
+    width: 92.19%;
+
+    font-size: 60px;
+    line-height: 60px;
+    background-color: @white;
+  }
+
+  .example__food-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    width: 92.19%;
+    min-height: 264px;
+
+    padding-bottom: 230px;
+  }
+
+  .example__text {
+    box-sizing: border-box;
+
+    padding-top: 38px;
+
+    width: 98%;
+    min-height: 50px;
+
+    font-size: 16px;
+    line-height: 24px;
+    background-color: @white;
+
+    align-self: flex-start;
+  }
+
+  .example__list {
+    width: 365px;
+
+    background-color: @white;
+  }
+
+  .example__item {
+    background-color: white;
+
+    width: 160px;
+    height: 57px;
+  }
+
+  .example__result-num {
+    font-size: 30px;
+    line-height: 37.02px;
+  }
+
+  .example__result-text {
+    top: 88%;
+    left: 9.3%;
+
+    width: 130px;
+
+    font-size: 14px;
+    line-height: 14px;
+    background-color: @white;
+  }
+
+  .example__text-summarize {
+    box-sizing: border-box;
+
+    padding-top: 33px;
+
+    width: 190px;
+
+    font-size: 20px;
+    line-height: 29px;
+    background-color: @white;
+    text-align: right;
+  }
+
+  .example__catchange {
+    position: relative;
+
+    width: 100%;
+    min-height: 457px;
+  }
+
+  .example__catchange img {
+    position: absolute;
+    top: -206px;
+    left: 0;
+    right: 0;
+
+    margin: 0 auto;
+
+    width: 677px;
+    height: 529px;
+  }
+
+  .example__slider-block {
+    margin: 0 auto;
+    padding-top: 362px;
+
+    width: 570px;
+  }
+
+  .example__slider::before {
+    margin-bottom: 2px;
+
+    width: 428px;
+    height: 6px;
+
+    border: none;
+    background-color: #dcdcdc;
+  }
+
+  .example__slider::after {
+    left: 46.7%;
+    top: -4px;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50px;
+    border: 12px solid @white;
+    box-shadow: 0 0 3px 0 #34495e;
+  }
+
+  .example__catchange-text {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    background-color: @lightgray;
+
+    min-height: 650px;
+    height: 650px;
+    width: 1440px;
+  }
+
+  .example__title {
+    padding-top: 53px;
+    padding-left: 110px;
+
+    width: 1440px;
+    min-height: 190px;
+  }
+
+  .example__container {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0 auto;
+
+    width: 1220px;
+    height: 460px;
+
+    /*.outline(gray); */
+  }
+
+  .example__food-stats {
+    flex-direction: column;
+
+    margin: 0;
+    padding: 0;
+
+    width: 610px;
+    background-color: @lightgray;
+  }
+
+  .example__text {
+    padding-top: 70px;
+
+    width: 440px;
+
+    background-color: @lightgray;
+  }
+
+  .example__item {
+    background-color: @lightgray;
+  }
+
+  .example__list {
+    margin-top: 22px;
+
+    background-color: inherit;
+  }
+
+  .example__result-text {
+    background-color: inherit;
+  }
+
+  .example__text-summarize {
+    display: block;
+
+    margin-bottom: 70px;
+
+    width: 440px;
+
+    text-align: left;
+    background-color: inherit;
+  }
+
+  .example__text-summarize span {
+    padding-left: 60px;
+  }
+
+  .example__catchange {
+    width: 700px;
+  }
+
+  .example__slider-block {
+    margin-top: 3px;
+    margin-right: 0;
+  }
+}

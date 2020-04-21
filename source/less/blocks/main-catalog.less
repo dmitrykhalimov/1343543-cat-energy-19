@@ -1,39 +1,145 @@
 .main-catalog__list {
+  box-sizing: border-box;
+
   display: flex;
   flex-direction: column;
+
   margin: 0 auto;
   padding: 0;
-  width: 280px;
+
+  width: 100%;
 
   list-style: none;
-  .outline(tomato);
+  /* .outline(tomato); */
+}
+
+.main-catalog__item {
+  position: relative;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin: 0 auto;
+
+  min-height: 209px;
+  width: 100%;
+
+  /* .outline(green); */
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .main-catalog__goods-title {
+  /* .outline(pink); */
+  display: block;
+
+  margin-left: 160px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 0;
+
+  width: 100px;
+
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
+
+  &--expand {
+    margin-left: 0;
+    margin-top: 22px;
+    padding-left: 1px;
+
+    width: 100%;
+
+    text-align: center;
+  }
+}
+
+.main-catalog__expand svg {
+  display: block;
+  margin-top: 27px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  /* .outline(gray); */
+  fill: gray;
+}
+
+.main-catalog__expand-text {
+  font-size: 12px;
+  line-height: 10px;
+  text-align: center;
+}
+
+.main-catalog__show-button {
+  .button("catalog");
+  display: block;
+
+  margin-top: 23px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+
+  width: 87.85%;
+  height: 30px;
+
+  text-align: center;
+
+  background-color: @lightgray;
+  color: black;
 }
 
 .main-catalog__goods-title a {
   color: @black;
 }
 
+.main-catalog__food {
+  position: absolute;
+  left: 20px;
+}
+
 .main-catalog__goods-chars {
+  .list-reset;
+
+  margin-left: 160px;
+  margin-right: 20px;
+  margin-top: 13px;
+
   color: @darkgray;
   font-size: 12px;
   line-height: 16px;
+
+  /* .outline(blue); */
+  border-spacing: 0;
+}
+
+.main-catalog__field {
+  text-align: right;
+}
+
+.main-catalog__goods-chars td {
+  .list-reset;
 }
 
 .main-catalog__button {
   .button("catalog");
-}
 
-.main-catalog__item {
-  .outline(green);
-  min-height: 186px;
+  display: inline-block;
+
+  width: 87.85%;
+  height: 30px;
+
+  margin-top: 23px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
@@ -41,12 +147,106 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 708px;
+
+    width: 92.19%;
   }
 
   .main-catalog__item {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 140px;
+
     width: 324px;
-    height: 320px;
+    min-height: 431px;
+
+    background-color: #f2f2f2;
+  }
+
+  .main-catalog__goods-title {
+    margin-top: 163px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+
+    width: 152px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+
+    &--expand {
+      margin-top: 50px;
+    }
+  }
+
+  .main-catalog__goods-chars {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+
+    width: 249px;
+
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .main-catalog__goods-chars tr {
+    height: 32px;
+  }
+
+  .main-catalog__goods-chars td {
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .main-catalog__button {
+    margin-top: 32px;
+    width: 250px;
+  }
+
+  .main-catalog__food {
+    width: 161px;
+    height: 172px;
+
+    /* не сверстано, будет заменено на полноценную графику */
+    left: 100px;
+    top: -32px;
+  }
+
+  .main-catalog__expand {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 140px;
+
+    width: 322px;
+    min-height: 431px;
+
+    border: 1px solid #e6e6e6;
+  }
+
+  .main-catalog__expand svg {
+    /* поправить svg */
+    width: 60px;
+    height: 60px;
+
+    margin-top: 54px;
+  }
+
+  .main-catalog__expand-text {
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 200px;
+
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .main-catalog__show-button {
+    margin-top: 84px;
+
+    width: 250px;
   }
 }
 
@@ -55,8 +255,28 @@
     width: 1220px;
   }
 
+  .main-catalog__goods-chars {
+    width: 167px;
+  }
+
   .main-catalog__item {
     width: 245px;
-    min-height: 512px;
+    min-height: 431px;
+
+    margin-top: 141px;
+  }
+
+  .main-catalog__button {
+    width: 169px;
+  }
+
+  .main-catalog__food {
+    /* не сверстано, будет заменено на полноценную графику */
+    left: 55px;
+    top: -32px;
+  }
+
+  .main-catalog__expand {
+    width: 245px;
   }
 }

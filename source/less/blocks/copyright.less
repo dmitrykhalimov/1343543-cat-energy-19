@@ -2,13 +2,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 280px;
-  height: 78px;
+
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 68px;
+
+  padding-top: 10px;
+  padding-left: 19px;
+  padding-right: 14px;
 
   background-color: @lightgray;
   font-size: 16px;
   line-height: 16px;
-  .outline(gray);
+  /* .outline(gray); */
 }
 
 .copyright__text {
@@ -16,9 +23,19 @@
   padding: 0;
 }
 
+.copyright__logo svg {
+  display: inline-block;
+
+  padding-top: 6px;
+
+  fill: #666666;
+}
+
 @media (min-width: @tablet-width) {
   .copyright {
-    min-width: 162px;
+    padding: 0;
+
+    width: 150px;
     height: 37px;
   }
 }
