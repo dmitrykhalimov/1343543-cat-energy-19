@@ -41,55 +41,59 @@
         <p class="page-main__form-text">Заполните анкету и мы подберем
           программу питания для вашего кота</p>
         <form class="form" method="post" action="https://echo.htmlacademy.ru">
-          <fieldset class="form__about">
-            <legend class="visually-hidden">Информация о коте</legend>
-            <div class="form__input-box form__input-box--name">
-              <label for="cat-name">Имя:*</label>
-              <input type="text" class="form__input" id="cat-name" name="name" value="" placeholder="Барсик">
-            </div>
-            <div class="form__input-box form__input-box--weight">
-              <label for="cat-weight"><span>Вес (кг):*</span></label>
-              <input type="text" class="form__input" id="cat-weight" name="weight" value="" placeholder="7">
-            </div>
-            <div class="form__input-box form__input-box--age">
-              <label for="cat-age">Возраст (лет):</label>
-              <input type="text" class="form__input" id="cat-age" name="age" value="" placeholder="7">
-            </div>
-          </fieldset>
-          <fieldset class="form__purpose">
-            <legend class="visually-hidden">Цель выбора программы</legend>
-            <ul class="form__purpose-list">
-              <li class="form__purpose-item">
-                <input class="visually-hidden form__purpose-input" checked type="radio" name="purpose-group" value="lose-weight" id="filter-lose-weight">
-                <label for="filter-lose-weight">Похудение</label>
-              </li>
-              <li class="form__purpose-item">
-                <input class="visually-hidden form__purpose-input" type="radio" name="purpose-group" value="gain-weight" id="filter-gain-weight">
-                <label for="filter-gain-weight">Набор массы</label>
-              </li>
-              <li class="form__purpose-item">
-                <input class="visually-hidden form__purpose-input" type="radio" name="purpose-group" value="give-advice" id="filter-give-advice">
-                <label for="filter-give-advice">Не знаю (нужен ваш совет)</label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="form__container">
+            <fieldset class="form__about">
+              <legend class="visually-hidden">Информация о коте</legend>
+              <div class="form__input-box form__input-box--name">
+                <label for="cat-name">Имя:*</label>
+                <input type="text" id="cat-name" name="name" value="" placeholder="Барсик">
+              </div>
+              <div class="form__input-box form__input-box--weight">
+                <label for="cat-weight"><span>Вес (кг):*</span></label>
+                <input type="text" class="form__input" id="cat-weight" name="weight" value="" placeholder="7">
+              </div>
+              <div class="form__input-box form__input-box--age">
+                <label for="cat-age">Возраст (лет):</label>
+                <input type="text" class="form__input" id="cat-age" name="age" value="" placeholder="7">
+              </div>
+            </fieldset>
+            <fieldset class="form__purpose">
+              <legend class="visually-hidden">Цель выбора программы</legend>
+              <ul class="form__purpose-list">
+                <li class="form__purpose-item">
+                  <input class="visually-hidden form__purpose-input" checked type="radio" name="purpose-group" value="lose-weight" id="filter-lose-weight">
+                  <label for="filter-lose-weight">Похудение</label>
+                </li>
+                <li class="form__purpose-item">
+                  <input class="visually-hidden form__purpose-input" type="radio" name="purpose-group" value="gain-weight" id="filter-gain-weight">
+                  <label for="filter-gain-weight">Набор массы</label>
+                </li>
+                <li class="form__purpose-item">
+                  <input class="visually-hidden form__purpose-input" type="radio" name="purpose-group" value="give-advice" id="filter-give-advice">
+                  <label for="filter-give-advice">Не знаю (нужен ваш совет)</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
           <fieldset class="form__contacts">
-            <legend class="form__legend">Контактные данные (владельца кота)</legend>
-            <div class="form__input-box form__input-box--email">
-              <label for="client-email">E-mail:*</label>
-              <input type="text" class="form__input" id="client-email" name="email" value="" placeholder="kuklachev@gmail.com">
-            </div>
-            <div class="form__input-box form__input-box--phone">
-              <label for="client-phone">Телефон:*</label>
-              <input type="text" class="form__input" id="client-phone" name="phone" value="" placeholder="8 (960) 900-60-90">
+            <legend class="form__legend form__legend--contacts">Контактные данные (владельца кота)</legend>
+            <div class="form__contacts-wrapper">
+              <div class="form__input-box form__input-box--email">
+                <label for="client-email">E-mail:*</label>
+                <input type="text" class="form__input" id="client-email" name="email" value="" placeholder="kuklachev@gmail.com">
+              </div>
+              <div class="form__input-box form__input-box--phone">
+                <label for="client-phone">Телефон:*</label>
+                <input type="text" class="form__input" id="client-phone" name="phone" value="" placeholder="8 (960) 900-60-90">
+              </div>
             </div>
           </fieldset>
           <fieldset class="form__comment">
-            <legend class="form__legend">Комментарий</legend>
-            <textarea class="form__comment" id="client-comment" name="comment">Расскажите обо всех повадках кота</textarea>
+            <legend class="form__legend form__legend--comment">Комментарий</legend>
+            <textarea id="client-comment" name="comment">Расскажите обо всех повадках кота</textarea>
           </fieldset>
           <fieldset class="form__additional">
-            <legend class="form__legend">Дополнительно</legend>
+            <legend class="form__legend form__legend--additional">Дополнительно</legend>
             <ul class="form__additional-list">
               <li class="form__additional-item">
                 <input class="visually-hidden form__additional-input" type="checkbox" name="purpose-group" value="sugar" id="filter-sugar" checked>
@@ -109,13 +113,15 @@
               </li>
             </ul>
           </fieldset>
-          <button class="form__button" type="button">Отправить заявку</button>
-          <p class="form__text">* — Обязательные поля</p>
+          <div class="form__submit">
+            <button class="form__button" type="button">Отправить заявку</button>
+            <p class="form__text">* — Обязательные поля</p>
+          </div>
         </form>
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__contacts contacts contacts--main">
+      <div class="page-footer__contacts contacts">
         <h3 class="contacts__title">Приглашаем <br> к сотрудничеству дилеров!</h3>
         <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class = "contacts__margin">Санкт-Петербург</span></p>
       </div>
