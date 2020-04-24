@@ -102,6 +102,54 @@
   font-size: 16px;
   line-height: 18px;
   color: @black;
+
+  border-color: #e6e6e6;
+  border-style: solid;
+  border-width: 1px;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:invalid {
+    box-shadow: none;
+    border-color: #ff8282;
+  }
+
+  &:active {
+    border-width: 2px;
+    border-color: #444444;
+    padding-left: 11px;
+    padding-bottom: 1px;
+  }
+}
+
+.form__input-box input {
+  fill: #222222;
+  &:active + svg {
+    fill: #68b738;
+  }
+
+  &:invalid ~ svg {
+    fill: #ff8282;
+  }
+
+}
+
+.form__contacts-wrapper .form__input-box {
+  position: relative;
+}
+
+.form__input-box--phone svg {
+  position: absolute;
+  top: 13px;
+  right: 32px;
+}
+
+.form__input-box--email svg {
+  position: absolute;
+  top: 16px;
+  right: 36px;
 }
 
 .form label {
@@ -159,6 +207,10 @@
   border-bottom: 1px solid #ededed;
   border-left: 0;
   border-right: 0;
+}
+
+.form__purpose-item:active {
+  opacity: 0.3;
 }
 
 .form__purpose label {
@@ -288,6 +340,10 @@
 
   margin-bottom: 10px;
   padding-left: 20px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .form__additional-item label {
@@ -315,6 +371,11 @@
 
   width: 28px;
   height: 28px;
+
+  &:hover {
+    /* ни малейшей мысли почему не работает, поправить */
+    border-color: #bababa;
+  }
 }
 
 .form__additional-input:checked + label::after {
@@ -344,6 +405,13 @@
 
   font-size: 16px;
   line-height: 20px;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.302);
+  }
 }
 
 .form__text {
@@ -504,6 +572,16 @@
 
   .form__contacts {
     min-height: 315px;
+  }
+
+  .form__input-box--phone svg {
+    top: 16px;
+    right: 83px;
+  }
+
+  .form__input-box--email svg {
+    top: 21px;
+    right: 86px;
   }
 
   .form__contacts .form__input-box--email {
@@ -750,6 +828,16 @@
   .form__contacts {
     min-height: unset;
     padding-bottom: 45px;
+  }
+
+  .form__input-box--phone svg {
+    top: 16px;
+    right: 20px;
+  }
+
+  .form__input-box--email svg {
+    top: 18px;
+    right: 20px;
   }
 
   .form__contacts .form__input-box {

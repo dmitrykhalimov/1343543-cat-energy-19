@@ -331,10 +331,28 @@
     box-shadow: 0 0 3px 0 #34495e;
   }
 
+  .example__slider-block:hover .example__slider::after {
+    box-shadow: 0px 2px 4px -1px #34495e;
+  }
+
+  .example__slider-block:active .example__slider::after {
+    box-shadow: 0px 0px 0px 1px #68b738,
+                0px 2px 3px 0 #34495e;
+  }
+
   .example__catchange-text {
     font-size: 20px;
     line-height: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted gray;
   }
+
+  .example__slider-block:hover .example__catchange-text {
+    border-bottom: 1px solid gray;
+  }
+  .example__slider-block:active .example__catchange-text {
+    border-bottom: 0;
+}
 }
 
 @media (min-width: @desktop-width) {
