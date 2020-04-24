@@ -42,9 +42,7 @@
 
   width: 100px;
 
-  font-family: "Oswald", "Arial", sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
+  .font-oswald(uppercase);
   font-size: 16px;
   line-height: 20px;
 
@@ -57,6 +55,11 @@
 
     text-align: center;
   }
+}
+
+.main-catalog__expand {
+  border-bottom: 1px solid #cdcdcd;
+  min-height: 208px;
 }
 
 .main-catalog__expand svg {
@@ -205,12 +208,17 @@
   }
 
   .main-catalog__food {
-    width: 161px;
-    height: 172px;
+    left: 0;
+    top: -46px;
+  }
 
-    /* не сверстано, будет заменено на полноценную графику */
-    left: 100px;
-    top: -32px;
+  .main-catalog__item:nth-child(even) .main-catalog__food {
+    top: -81px;
+  }
+
+  .main-catalog__food img {
+    max-width: unset;
+    width: 322px;
   }
 
   .main-catalog__expand {
@@ -227,7 +235,7 @@
   .main-catalog__expand svg {
     /* поправить svg */
     width: 60px;
-    height: 60px;
+    height: auto;
 
     margin-top: 54px;
   }
@@ -271,9 +279,12 @@
   }
 
   .main-catalog__food {
-    /* не сверстано, будет заменено на полноценную графику */
-    left: 55px;
-    top: -32px;
+    left: 0;
+    top: -48px;
+  }
+
+  .main-catalog__food img {
+    width: 245px;
   }
 
   .main-catalog__expand {

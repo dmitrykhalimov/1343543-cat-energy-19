@@ -14,7 +14,12 @@
   min-height: 114px;
 
   line-height: 20px;
-  background-color: @white;
+
+  background-color: @lightgray;
+
+  &--main {
+    background-color: @white;
+  }
 }
 
 .contacts__title {
@@ -23,9 +28,7 @@
 
   flex-basis: 140px;
 
-  font-family: "Oswald", "Arial", sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
+  .font-oswald(uppercase);
   font-size: 16px;
   line-height: 20px;
   color: @black;
@@ -84,7 +87,8 @@
     left: 110px;
 
     width: 570px;
-    height: 201px;
+    /* min-height: 201px; */
+    background-color: @white;
   }
 
   .contacts__title {
