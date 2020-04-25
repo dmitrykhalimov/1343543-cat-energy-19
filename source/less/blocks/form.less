@@ -53,7 +53,6 @@
 .form__legend--comment {
   padding-top: 13px;
   padding-bottom: 36px;
-
 }
 
 .form__legend--comment::after {
@@ -122,10 +121,9 @@
     padding-left: 11px;
     padding-bottom: 1px;
   }
-}
 
-.form__input-box input {
   fill: #222222;
+
   &:active + svg {
     fill: #68b738;
   }
@@ -133,7 +131,6 @@
   &:invalid ~ svg {
     fill: #ff8282;
   }
-
 }
 
 .form__contacts-wrapper .form__input-box {
@@ -168,7 +165,7 @@
 
 .form__about {
   .list-reset;
-  border: 0px;
+  border: 0;
 
   padding-left: 19px;
   padding-right: 20px;
@@ -263,7 +260,7 @@
 
 .form__contacts {
   .list-reset;
-  border: 0px;
+  border: 0;
   /*временно для сетки*/
   /*.outline(green);*/
 }
@@ -293,7 +290,7 @@
 }
 
 .form__comment {
-  border: 0px;
+  border: 0;
   .list-reset;
 
   /*временно для сетки*/
@@ -318,6 +315,15 @@
   color: @black;
 
   border: 1px solid #ededed;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:active {
+    border-width: 2px;
+    border-color: #444444;
+  }
 }
 
 
@@ -409,6 +415,7 @@
   &:hover {
     background-color: #5eaa2f;
   }
+
   &:active {
     color: rgba(255, 255, 255, 0.302);
   }
@@ -419,17 +426,6 @@
   margin-bottom: 31px;
   text-align: center;
   font-size: 14px;
-}
-
-.form__comment textarea {
-  &:hover {
-    border-color: #cdcdcd;
-  }
-
-  &:active {
-    border-width: 2px;
-    border-color: #444444;
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -604,7 +600,6 @@
     .list-reset;
     padding-left: 68px;
     padding-right: 65px;
-
   }
 
   .form__input-box--email label {
@@ -640,6 +635,7 @@
 
     min-height: 178px;
   }
+
   .form__additional {
     .list-reset;
   }
@@ -663,7 +659,7 @@
     margin-bottom: 40px;
   }
 
-  .form__additional-item label{
+  .form__additional-item label {
     padding-top: 9px;
     padding-left: 59px;
   }
@@ -677,12 +673,14 @@
     left: 10px;
     top: 11px;
   }
+
   .form__submit {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     min-height: 145px;
   }
+
   .form__button {
     display: block;
 
@@ -694,7 +692,6 @@
 
     font-size: 20px;
     line-height: 20px;
-
   }
 
   .form__text {
@@ -861,7 +858,7 @@
     .list-reset;
   }
 
-  .form__input-box--email label{
+  .form__input-box--email label {
     width: 89px;
   }
 
