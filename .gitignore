@@ -5,10 +5,12 @@
 *.log
 *.pdf
 *.psd
+*.bak
 *.sublime*
 build/
-temp/
+source/temp/
 css/
+temp/
 node_modules/
 npm-debug.*
 source/css/*.css

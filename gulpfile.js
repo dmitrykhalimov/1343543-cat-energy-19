@@ -74,15 +74,13 @@ gulp.task("sprite", function() {
     .pipe(imagemin([
       imagemin.svgo()
     ]))
-    .pipe(rename("sprite2.svg"))
+    .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));
 })
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
-    .pipe(posthtml([
-      include()
-    ]))
+    .pipe(posthtml())
     .pipe(gulp.dest("build"));
 })
 
