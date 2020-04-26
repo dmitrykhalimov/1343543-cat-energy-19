@@ -21,14 +21,40 @@
 .copyright__text {
   margin: 0;
   padding: 0;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:visited {
+    color: @black;
+  }
 }
 
 .copyright__logo svg {
   display: inline-block;
 
   padding-top: 6px;
+}
 
+.copyright__logo {
   fill: #666666;
+
+  &:hover {
+    fill: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright:hover .copyright__logo {
+  fill: #68b738;
+}
+
+.copyright:active .copyright__logo {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {

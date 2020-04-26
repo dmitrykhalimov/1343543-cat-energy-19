@@ -27,7 +27,6 @@
 
   &--form {
     border-bottom: 0;
-    .outline(green);
     min-height: 101px;
   }
 }
@@ -36,6 +35,7 @@
   .list-reset;
 
   padding-left: 20px;
+  padding-bottom: 2px;
 
   min-height: 73px;
   width: 250px;
@@ -70,7 +70,6 @@
     padding-left: 70px;
     padding-top: 30px;
 
-    .outline(yellow);
     font-size: 20px;
     line-height: 30px;
   }
@@ -78,12 +77,13 @@
 
 @media (min-width: @desktop-width) {
   .page-main {
-    width: 1440px;
+    width: 1300px;
+    margin: 0 auto;
   }
 
   .page-main__title {
     padding-top: 71px;
-    padding-left: 110px;
+    padding-left: 40px;
     min-height: 155px;
 
     width: 1220px;
@@ -92,6 +92,7 @@
   }
 
   .page-main__form-text {
-    padding-left: 110px;
+    padding-top: 31px;
+    padding-left: 40px;
   }
 }

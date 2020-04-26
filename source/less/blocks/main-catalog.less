@@ -95,6 +95,14 @@
 
   background-color: @lightgray;
   color: black;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 .main-catalog__goods-title a {
@@ -121,12 +129,12 @@
   border-spacing: 0;
 }
 
-.main-catalog__field {
-  text-align: right;
-}
-
 .main-catalog__goods-chars td {
   .list-reset;
+
+  &:last-child {
+    text-align: right;
+  }
 }
 
 .main-catalog__button {
@@ -143,6 +151,14 @@
   padding-top: 10px;
 
   text-align: center;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.302);
+  }
 }
 
 @media (min-width: @tablet-width) {
