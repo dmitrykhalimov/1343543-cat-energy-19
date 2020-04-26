@@ -15,6 +15,12 @@ var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var del = require("del");
 var include = require("posthtml-include");
+var gulp = require('gulp');
+var htmlmin = require('gulp-htmlmin');
+var purgecss = require('gulp-purgecss');
+var uglify = require('gulp-uglify');
+var pipeline = require('readable-stream').pipeline;
+
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
@@ -24,8 +30,11 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
-    /* .pipe(csso()) */
-    .pipe(rename("style.css"))
+    .pipe(purgecss({
+      content: ['source/*.html']
+    }))
+    .pipe(csso())
+    .pipe(rename("style-min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
@@ -80,7 +89,8 @@ gulp.task("sprite", function() {
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
-    .pipe(posthtml())
+    /*.pipe(posthtml()) */
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 })
 
@@ -108,4 +118,22 @@ gulp.task("build", gulp.series(
   "html"
 ));
 
+
+gulp.task('purgecss', () => {
+    return gulp.src('build/css/*.css')
+        .pipe(purgecss({
+            content: ['build/*.html']
+        }))
+        .pipe(gulp.dest('build/css2'))
+})
+
+gulp.task("compress", function () {
+  return pipeline(
+        gulp.src("sourse/js/*.js"),
+        uglify(),
+        gulp.dest("build/js")
+  );
+});
+
 gulp.task("start", gulp.series("build", "server"));
+
