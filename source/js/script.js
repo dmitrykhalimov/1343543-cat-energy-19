@@ -5,6 +5,8 @@ var openedClass = 'main-nav--opened';
 var closedClass = 'main-nav--closed';
 
 navMain.classList.remove('main-nav--nojs');
+
+
 navToggle.addEventListener('click', function() {
   if (navMain.classList.contains(closedClass)) {
     navMain.classList.remove(closedClass);
