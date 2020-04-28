@@ -485,7 +485,7 @@
 
   .form__legend--additional::after {
     top: 83px;
-    width: calc(100% - 322px);
+    width: 0px;
   }
 
   .form__legend--additional::before {
@@ -672,6 +672,7 @@
   .form__additional-input:checked + label::after {
     left: 10px;
     top: 11px;
+
   }
 
   .form__submit {
@@ -709,12 +710,15 @@
   /* заголовки и линии заголовков*/
 
   .form__legend {
-    padding-left: 39px;
+    position: initial;
+    padding-left: 0;
+    width: 1220px;
+    margin: 0 auto;
+
   }
 
   .form__legend::before {
-    width: 70px;
-    left: -70px;
+    width: calc((100% - 1300px) / 2);
   }
 
   .form__legend--contacts {
@@ -724,11 +728,12 @@
 
   .form__legend--contacts::after {
     top: 71px;
-    width: calc(100% - 592px);
+    width: calc((100% + 113px) / 2);
   }
 
   .form__legend--contacts::before {
     top: 71px;
+    left: 0px;
   }
 
   .form__legend--comment {
@@ -737,12 +742,16 @@
   }
 
   .form__legend--comment::after {
-    top: 43px;
-    width: calc(100% - 258px);
+    top: 42px;
+    left: auto;
+    right: 0;
+    width: calc((100% + 750px) / 2);
   }
 
   .form__legend--comment::before {
+    left: 0;
     top: 43px;
+
   }
 
   .form__legend--additional {
@@ -751,7 +760,7 @@
 
   .form__legend--additional::after {
     top: 85px;
-    width: calc(100% - 292px);
+    width: calc((100% + 700px) / 2);
   }
 
   .form__legend--additional::before {
@@ -764,7 +773,6 @@
   }
 
   .form__input-box--weight label {
-    /*.outline(green);*/
     width: 91px;
   }
 
@@ -783,11 +791,11 @@
     flex-direction: row;
     justify-content: space-between;
 
-    margin-left: 40px;
-    margin-right: 40px;
-
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 51px;
-    /*.outline(purple);*/
+
+    width: 1220px;
   }
 
   .form__about {
@@ -823,17 +831,27 @@
     width: 155px;
   }
 
+
   .form__contacts-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
     margin: 0 auto;
+
     width: 1220px;
   }
 
   .form__contacts {
+    position: relative;
+
     min-height: unset;
+
     padding-bottom: 45px;
+    margin-right: auto;
+    margin-left: auto;
+
+    width: 100%;
   }
 
   .form__input-box--phone svg {
@@ -863,12 +881,17 @@
   }
 
   .form__comment {
+    position: relative;
+
+    margin-left: auto;
+    margin-right: auto;
+
     min-height: 167px;
   }
 
   .form__comment textarea {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: auto;
+    margin-right: auto;
 
     padding-top: 9px;
     padding-left: 18px;
@@ -882,11 +905,13 @@
 
   .form__additional {
     min-height: unset;
+    position: relative;
   }
 
   .form__additional-list {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1220px;
   }
 
   .form__additional-item {
@@ -902,18 +927,23 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+
     min-height: 153px;
+    width: 1220px;
+
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .form__button {
-    margin-left: 41px;
+    margin-left: 0;
     margin-top: 20px;
 
     width: 568px;
   }
 
   .form__text {
-    margin-right: 430px;
+    margin-right: 390px;
 
     font-size: 16px;
     line-height: 16px;
