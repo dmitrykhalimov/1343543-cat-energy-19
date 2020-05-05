@@ -2,8 +2,6 @@
   margin: 0 auto;
 
   width: 100%;
-
-  /*.outline(tomato);*/
 }
 
 .main-nav__wrapper {
@@ -41,33 +39,37 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 18px;
+    width: 24px;
     height: 2px;
 
     background-color: @menublack;
     box-shadow: 0 8px 0 0 @menublack, 0 16px 0 0 @menublack;
   }
 
-  .main-nav--opened .main-nav__toggle-menu {
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      left: -2px;
-      top: 8px;
+  .main-nav--opened .main-nav__toggle-menu::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: 8px;
 
-      width: 24px;
-      height: 2px;
-      background-color: @menublack;
-    }
+    width: 24px;
+    height: 2px;
+    background-color: @black;
 
-    &::before {
-      transform: rotate(45deg);
-    }
+    transform: rotate(45deg);
+  }
 
-    &::after {
-      transform: rotate(-45deg);
-    }
+  .main-nav--opened .main-nav__toggle-menu::after {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: 8px;
+
+    width: 24px;
+    height: 2px;
+    background-color: @black;
+
+    transform: rotate(-45deg);
   }
 
   .main-nav--nojs .main-nav__toggle-menu {

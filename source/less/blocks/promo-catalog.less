@@ -24,9 +24,7 @@
   position: relative;
   box-sizing: padding-box;
 
-  margin-top: 22px;
-
-  min-height: 265px;
+  margin-top: 21px;
 
   list-style: none;
   background-color: @lightgray;
@@ -73,34 +71,49 @@
 
 .promo-catalog__title {
   padding-left: 91px;
-  padding-top: 29px;
+  padding-top: 30px;
 
   text-align: left;
   font-size: 24px;
   line-height: 37.02px;
 }
 
-.promo-catalog__item--lose .promo-catalog__title::before {
+.promo-catalog__item--lose .promo-catalog__title::before,
+.promo-catalog__item--gain .promo-catalog__title::before {
+  box-sizing: border-box;
+
   position: absolute;
   display: block;
-  left: 12px;
-  top: 14px;
+  left: 22px;
+  top: 25px;
   content: "";
 
   width: 50px;
   height: 50px;
-
-  padding: 10px;
-
-  background: url("../img/icon-cat-slim.svg") no-repeat,
-    @green;
-  background-size: 36px auto, 10px 10px;
   border-radius: 50px;
-  background-clip: padding-box, content-box;
-  background-position: 50% 35%;
+
+  background: @green;
+  background-repeat: no-repeat;
 }
 
-.promo-catalog__item--gain .promo-catalog__title::before {
+.promo-catalog__item--lose .promo-catalog__title::after {
+  box-sizing: border-box;
+
+  position: absolute;
+  display: block;
+  left: 22px;
+  top: 22px;
+  content: "";
+
+  width: 50px;
+  height: 50px;
+
+  background: url("../img/icon-cat-slim.svg");
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+}
+
+.promo-catalog__item--gain .promo-catalog__title::after {
   content: "";
 
   position: absolute;
@@ -114,19 +127,17 @@
   height: 50px;
 
 
-  background: url("../img/icon-cat-pro.svg") no-repeat,
-    @green;
-  background-size: 67px auto, 10px 10px;
-  border-radius: 50px;
-  background-clip: padding-box, content-box;
-  background-position: 50% 45%;
+  background: url("../img/icon-cat-pro.svg");
+  background-repeat: no-repeat;
+  background-size: 68px 70px;
 }
 
 .promo-catalog__link {
   position: relative;
   display: block;
 
-  padding-top: 19px;
+  padding-top: 20px;
+  padding-bottom: 21px;
   padding-left: 19px;
 
   font-size: 16px;
@@ -198,34 +209,38 @@
     min-height: 372px;
   }
 
-  .promo-catalog__item--lose .promo-catalog__title::before {
-    left: auto;
-    right: 37px;
-    top: 67px;
-
-    padding: 25px;
-
-    width: 200px;
-    height: 200px;
-
-    background-size: 140px auto, 10px 10px;
-    border-radius: 200px;
-    background-position: 50% 22%;
-  }
-
+  .promo-catalog__item--lose .promo-catalog__title::before,
   .promo-catalog__item--gain .promo-catalog__title::before {
     left: auto;
-    right: 15px;
-    top: 46px;
-
-    padding: 45px;
+    right: 61px;
+    top: 91px;
 
     width: 200px;
     height: 200px;
 
-    background-size: 270px auto, 10px 10px;
     border-radius: 200px;
-    background-position: 42% 50%;
+  }
+
+  .promo-catalog__item--lose .promo-catalog__title::after {
+    left: auto;
+    right: 57px;
+    top: 80px;
+
+    width: 200px;
+    height: 200px;
+
+    background-size: 190px 196px;
+  }
+
+  .promo-catalog__item--gain .promo-catalog__title::after {
+    left: auto;
+    right: 17px;
+    top: 62px;
+
+    width: 260px;
+    height: 200px;
+
+    background-size: 270px 260px;
   }
 
   .promo-catalog__item:nth-child(2) {
@@ -288,12 +303,11 @@
     left: 184px;
   }
 
-  .promo-catalog__item--lose .promo-catalog__title::before {
-    left: 27px;
+  .promo-catalog__item--lose .promo-catalog__title::before,
+  .promo-catalog__item--gain .promo-catalog__title::before {
+    left: 52px;
     right: auto;
-    top: 22px;
-
-    padding: 25px;
+    top: 47px;
 
     width: 100px;
     height: 100px;
@@ -302,22 +316,28 @@
     background-position: 49% 35%;
   }
 
-  .promo-catalog__item--gain .promo-catalog__title::before {
-    left: 7px;
+  .promo-catalog__item--lose .promo-catalog__title::after {
+    left: 55px;
     right: auto;
-    top: 2px;
-
-    padding: 45px;
+    top: 41px;
 
     width: 100px;
     height: 100px;
 
-    background-size: 135px auto, 10px 10px;
-    border-radius: 100px;
-    background-position: 49% 50%;
+    background-size: 92px 97px;
   }
 
-  /* поправить! */
+  .promo-catalog__item--gain .promo-catalog__title::after {
+    left: 34px;
+    right: auto;
+    top: 32px;
+
+    width: 200px;
+    height: 100px;
+
+    background-size: 135px 130px;
+  }
+
   .promo-catalog__list .promo-catalog__item {
     margin-top: 0;
     margin-bottom: 0;
