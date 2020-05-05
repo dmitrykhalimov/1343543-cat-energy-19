@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="css/style-min.css" as="style">
+
     <link href="./css/style-min.css" rel="stylesheet">
   </head>
   <body>
@@ -47,15 +51,15 @@
               <legend class="visually-hidden">Информация о коте</legend>
               <div class="form__input-box form__input-box--name">
                 <label for="cat-name">Имя:*</label>
-                <input type="text" id="cat-name" name="name" value="" placeholder="Барсик" required>
+                <input type="text" id="cat-name" name="name" placeholder="Барсик" required>
               </div>
               <div class="form__input-box form__input-box--weight">
                 <label for="cat-weight"><span>Вес (кг):*</span></label>
-                <input type="text" class="form__input" id="cat-weight" name="weight" value="" placeholder="7" required>
+                <input type="text" class="form__input" id="cat-weight" name="weight" placeholder="7" required>
               </div>
               <div class="form__input-box form__input-box--age">
                 <label for="cat-age">Возраст (лет):</label>
-                <input type="text" class="form__input" id="cat-age" name="age" value="" placeholder="7">
+                <input type="text" class="form__input" id="cat-age" name="age" placeholder="7">
               </div>
             </fieldset>
             <fieldset class="form__purpose">
@@ -124,7 +128,7 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__contacts contacts contacts--main">
+      <div class="page-footer__contacts contacts">
         <h3 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
         <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class = "contacts__margin">Санкт-Петербург</span></p>
       </div>
