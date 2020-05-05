@@ -13,7 +13,6 @@
   padding-bottom: 23px;
 
   border-top: 1px solid @grayline;
-  /*.outline(yellow); */
   list-style: none;
 }
 
@@ -56,8 +55,6 @@
     margin-bottom: -3px;
 
     width: 440px;
-
-    /*.outline(tomato);*/
   }
 
   .site-list__item {
@@ -99,8 +96,6 @@
   .site-list {
     margin-top: 31px;
     min-width: 479px;
-
-    /*.outline(blue);*/
   }
 
   .site-list__item a {
@@ -113,8 +108,7 @@
     color: @white;
   }
 
-  /*нет времени думать, заменить потом на нормальный селктор */
-  .site-list--main .site-list__item--active a::after {
+  .site-list--main a::after {
     background-color: @white;
   }
 }
