@@ -110,7 +110,7 @@
     border-color: #cdcdcd;
   }
 
-  &:invalid {
+  &:focus:invalid {
     box-shadow: none;
     border-color: #ff8282;
   }
@@ -128,7 +128,7 @@
     fill: #68b738;
   }
 
-  &:invalid ~ svg {
+  &:active:invalid ~ svg {
     fill: #ff8282;
   }
 }
@@ -496,7 +496,7 @@
   .form input {
     font-size: 20px;
     line-height: 20px;
-    color: green;
+    color: @black;
   }
 
   .form__input-box {
