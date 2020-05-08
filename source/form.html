@@ -45,7 +45,7 @@
         <h2 class="visually-hidden">Анкета для подбора</h2>
         <p class="page-main__form-text">Заполните анкету и мы подберем
           программу питания для вашего кота</p>
-        <form class="form" method="post" action="https://echo.htmlacademy.ru">
+        <form class="form" action="https://echo.htmlacademy.ru/courses" mehod="post">
           <div class="form__container">
             <fieldset class="form__about">
               <legend class="visually-hidden">Информация о коте</legend>
@@ -85,12 +85,12 @@
             <div class="form__contacts-wrapper">
               <div class="form__input-box form__input-box--email">
                 <label for="client-email">E-mail:*</label>
-                <input type="text" class="form__input" id="client-email" name="email" value="" placeholder="kuklachev@gmail.com" required>
+                <input type="email" class="form__input" id="client-email" name="email" value="" placeholder="kuklachev@gmail.com" required>
                 <svg width="17" height="13"><use xlink:href="img/sprite.svg#icon-mail"></use></svg>
               </div>
               <div class="form__input-box form__input-box--phone">
                 <label for="client-phone">Телефон:*</label>
-                <input type="text" class="form__input" id="client-phone" name="phone" value="" placeholder="8 (960) 900-60-90" required>
+                <input type="tel" class="form__input" id="client-phone" name="phone" placeholder="8 (960) 900-60-90" pattern="[0-9]{1} [(]{1}[0-9]{3}[)]{1} [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
                 <svg width="20" height="20"><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
               </div>
             </div>
@@ -103,25 +103,25 @@
             <legend class="form__legend form__legend--additional">Дополнительно</legend>
             <ul class="form__additional-list">
               <li class="form__additional-item">
-                <input class="visually-hidden form__additional-input" type="checkbox" name="purpose-group" value="sugar" id="filter-sugar" checked>
+                <input class="visually-hidden form__additional-input" type="checkbox" name="additional-group" value="sugar" id="filter-sugar" checked>
                 <label for="filter-sugar">Сахарозаменитель</label>
               </li>
               <li class="form__additional-item">
-                <input class="visually-hidden form__additional-input" type="checkbox" name="purpose-group" value="water" id="filter-water">
+                <input class="visually-hidden form__additional-input" type="checkbox" name="additional-group" value="water" id="filter-water">
                 <label for="filter-water">Питьевая вода</label>
               </li>
               <li class="form__additional-item">
-                <input class="visually-hidden form__additional-input" type="checkbox" name="purpose-group" value="milk" id="filter-milk">
+                <input class="visually-hidden form__additional-input" type="checkbox" name="additional-group" value="milk" id="filter-milk">
                 <label for="filter-milk">Молоко</label>
               </li>
               <li class="form__additional-item">
-                <input class="visually-hidden form__additional-input" type="checkbox" name="purpose-group" value="vitamins" id="filter-vitamins">
+                <input class="visually-hidden form__additional-input" type="checkbox" name="additional-group" value="vitamins" id="filter-vitamins">
                 <label for="filter-vitamins">Витамины</label>
               </li>
             </ul>
           </fieldset>
           <div class="form__submit">
-            <button class="form__button" type="button">Отправить заявку</button>
+            <button class="form__button" type="submit">Отправить заявку</button>
             <p class="form__text">* — Обязательные поля</p>
           </div>
         </form>
