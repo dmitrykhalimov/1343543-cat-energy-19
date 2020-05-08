@@ -102,24 +102,20 @@
   line-height: 18px;
   color: @black;
 
-  border-color: #e6e6e6;
-  border-style: solid;
-  border-width: 1px;
+  border: 0;
+  outline: 1px solid #e6e6e6;
 
   &:hover {
-    border-color: #cdcdcd;
+    outline-color: #cdcdcd;
   }
 
   &:focus:invalid {
-    box-shadow: none;
-    border-color: #ff8282;
+    outline-color: #ff8282;
   }
 
   &:active {
-    border-width: 2px;
-    border-color: #444444;
-    padding-left: 11px;
-    padding-bottom: 1px;
+    outline-width: 2px;
+    outline-color: #444444;
   }
 
   fill: #222222;
@@ -312,15 +308,15 @@
   line-height: 18px;
   color: @black;
 
-  border: 1px solid #ededed;
+  outline: 1px solid #ededed;
 
   &:hover {
     border-color: #cdcdcd;
   }
 
   &:active {
-    border-width: 2px;
-    border-color: #444444;
+    outline-width: 2px;
+    outline-color: #444444;
   }
 }
 
