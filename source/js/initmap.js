@@ -14,5 +14,3 @@ function initMap()
         icon: 'http://cat.dkha.site/img/map-pin.png'
     })
 }
-
-document.getElementsByClassName('map').style.display = "none";
