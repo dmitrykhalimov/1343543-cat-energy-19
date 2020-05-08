@@ -313,9 +313,7 @@
         <h3 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
         <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class = "contacts__margin">Санкт-Петербург</span></p>
       </div>
-      <div class="page-footer__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59909062743!2d30.32165801437811!3d59.93879440981702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1587157725850!5m2!1sru!2sru" width="320" height="363" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-      </div>
+      <div id="map" class="page-footer__map"></div>
       <div class="page-footer__wrapper">
         <a class="page-footer__logo" href="index.html">
           <img src="img/logo-footer.svg" alt="Магазин продуктов Cat Energy!" width="128" height="24">
@@ -351,6 +349,10 @@
         </div>
       </div>
     </footer>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7Cvsl5hCteAnUIGuvZIK4wpNDOblTNV0&callback=initMap">
+    </script>
+    <script src="./js/initmap.js"></script>
     <script src="./js/picturefill.min.js" async></script>
     <script src="./js/script.js"></script>
     <script src="./js/svg4everybody.min.js"></script>
