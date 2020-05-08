@@ -203,6 +203,10 @@
   border-right: 0;
 }
 
+.form__purpose-item:hover label:before {
+  border-color: #bababa;
+}
+
 .form__purpose-item:active {
   opacity: 0.3;
 }
@@ -371,10 +375,10 @@
 
   width: 28px;
   height: 28px;
+}
 
-  &:hover {
-    border-color: #bababa;
-  }
+.form__additional-input:hover + label::before{
+  border-color: #bababa;
 }
 
 .form__additional-input:checked + label::after {
