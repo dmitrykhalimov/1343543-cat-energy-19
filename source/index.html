@@ -5,39 +5,39 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="css/style-min.css" as="style">
-
     <link href="css/style-min.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__container page-header__container--main">
-        <a class="page-header__logo" href="#">
+        <a class="page-header__logo" href="index.html">
           <picture>
             <source media="(min-width: 1300px)" srcset="./img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
-            <img src="img/logo-mobile.svg" width="193" height="53" alt="Интернет-магазин «Кэт энерджи»">
+            <img src="./img/logo-mobile.svg" width="193" height="53" alt="Интернет-магазин «Кэт энерджи»">
           </picture>
         </a>
-        <nav class="main-nav main-nav--opened main-nav--nojs">
-          <div class="main-nav__wrapper">
-            <button class="main-nav__toggle-menu" type="button"></button>
-            <ul class="main-nav__list site-list site-list--main">
-              <li class="site-list__item site-list__item--active">
-                <a>Главная</a>
-              </li>
-              <li class="site-list__item">
-                <a href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="site-list__item">
-                <a href="form.html">Подбор программы</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+      <nav class="main-nav main-nav--opened main-nav--nojs">
+        <div class="main-nav__wrapper">
+          <button class="main-nav__toggle-menu" type="button"></button>
+          <ul class="main-nav__list site-list site-list--main">
+            <li class="site-list__item site-list__item--active">
+              <a>Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     </header>
+
     <main class="page-main">
       <h1 class="visually-hidden">Cat Energy - Магазин функционального питания для котов</h1>
       <section class="promo">
@@ -66,7 +66,6 @@
             <p class="promo-catalog__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a href="catalog.html" class="promo-catalog__link">
               Каталог Slim
-              <svg width="24" height="16"><use xlink:href="img/sprite.svg#icon-right-arrow-long"></use></svg>
               <svg width="32" height="16"><use xlink:href="img/sprite.svg#icon-right-arrow-verylong"></use></svg>
             </a>
           </li>
@@ -75,7 +74,6 @@
             <p class="promo-catalog__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a href="catalog.html" class="promo-catalog__link">
               Каталог Pro
-              <svg width="24" height="16"><use xlink:href="img/sprite.svg#icon-right-arrow-long"></use></svg>
               <svg width="32" height="16"><use xlink:href="img/sprite.svg#icon-right-arrow-verylong"></use></svg>
             </a>
           </li>
@@ -129,13 +127,14 @@
         </div>
       </section>
     </main>
+    </main>
     <footer class="page-footer">
-      <div class="page-footer__contacts contacts contacts--main">
-        <h3 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
-        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__margin">Санкт-Петербург</span></p>
-      </div>
-      <div class="page-footer__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59909062743!2d30.32165801437811!3d59.93879440981702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1587157725850!5m2!1sru!2sru" width="320" height="363" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <div class="page-footer__map-wrapper">
+        <div class="page-footer__contacts contacts contacts--main">
+          <h3 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
+          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__margin">Санкт-Петербург</span></p>
+        </div>
+        <div id="map" class="page-footer__map"></div>
       </div>
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
@@ -163,16 +162,20 @@
             </li>
           </ul>
         </div>
-        <div class="page-footer__copyright copyright">
-            <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
+            <p class="copyright__text">HTML Academy</p>
+            <div class="copyright__logo">
               <svg width="40" height="40"><use xlink:href="img/sprite.svg#icon-htmlacademy"></svg>
-            </a>
-        </div>
+            </div>
+        </a>
       </div>
     </footer>
-    <script src="./js/script.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7Cvsl5hCteAnUIGuvZIK4wpNDOblTNV0&callback=initMap">
+    </script>
+    <script src="./js/initmap.js"></script>
     <script src="./js/picturefill.min.js" async></script>
+    <script src="./js/script.js"></script>
     <script src="./js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
   </body>

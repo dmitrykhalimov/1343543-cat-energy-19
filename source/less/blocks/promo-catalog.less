@@ -35,23 +35,17 @@
   position: absolute;
 
   top: 20px;
-  left: 117px;
-
+  left: 108px;
   fill: #111111;
 
-  &:last-child {
-    display: none;
-  }
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 25% 100%);
+  transition-property: transform, clip-path;
+  transition-duration: 0.3s, 0.3s;
 }
 
 .promo-catalog__link:hover svg {
-  &:first-child {
-    display: none;
-  }
-
-  &:last-child {
-    display: inline-block;
-  }
+  transform: translateX(7.6px);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .promo-catalog__link:active {
@@ -59,14 +53,7 @@
 }
 
 .promo-catalog__link:active svg {
-  &:first-child {
-    display: none;
-  }
-
-  &:last-child {
-    display: inline-block;
-    fill: #c5c6c6;
-  }
+  fill: #c5c6c6;
 }
 
 .promo-catalog__title {
@@ -257,7 +244,7 @@
 
   .promo-catalog__link svg {
     top: 40px;
-    left: 183px;
+    left: 175px;
   }
 
   .promo-catalog__list a::before {
@@ -265,7 +252,7 @@
   }
 
   .promo-catalog__item:nth-child(2) .promo-catalog__link svg {
-    left: 178px;
+    left: 170px;
   }
 }
 
@@ -300,7 +287,6 @@
 
   .promo-catalog__link svg {
     top: 6px;
-    left: 184px;
   }
 
   .promo-catalog__item--lose .promo-catalog__title::before,

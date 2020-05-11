@@ -20,6 +20,20 @@
   border-bottom: 1px solid @grayline;
 }
 
+.site-list__item--active a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 32px;
+
+  height: 2px;
+
+  z-index: 2;
+  background-color: #68b738;
+}
+
 .site-list__item a {
   margin: auto;
 

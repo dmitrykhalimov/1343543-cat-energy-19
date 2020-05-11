@@ -5,7 +5,7 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="css/style-min.css" as="style">
 
     <link href="./css/style-min.css" rel="stylesheet">
@@ -45,10 +45,10 @@
         <h2 class="visually-hidden">Анкета для подбора</h2>
         <p class="page-main__form-text">Заполните анкету и мы подберем
           программу питания для вашего кота</p>
-        <form class="form" method="post" action="https://echo.htmlacademy.ru">
+        <form class="form" action="https://echo.htmlacademy.ru/courses" method="post">
           <div class="form__container">
             <fieldset class="form__about">
-              <legend class="visually-hidden">Информация о коте</legend>
+              <div class="visually-hidden">Информация о коте</div>
               <div class="form__input-box form__input-box--name">
                 <label for="cat-name">Имя:*</label>
                 <input type="text" id="cat-name" name="name" placeholder="Барсик" required>
@@ -63,7 +63,7 @@
               </div>
             </fieldset>
             <fieldset class="form__purpose">
-              <legend class="visually-hidden">Цель выбора программы</legend>
+              <div class="visually-hidden">Цель выбора программы</div>
               <ul class="form__purpose-list">
                 <li class="form__purpose-item">
                   <input class="visually-hidden form__purpose-input" checked type="radio" name="purpose-group" value="lose-weight" id="filter-lose-weight">
@@ -81,59 +81,59 @@
             </fieldset>
           </div>
           <fieldset class="form__contacts">
-            <legend class="form__legend form__legend--contacts">Контактные данные (владельца&nbsp;кота)</legend>
+            <div class="form__legend form__legend--contacts">Контактные данные (владельца&nbsp;кота)</div>
             <div class="form__contacts-wrapper">
               <div class="form__input-box form__input-box--email">
                 <label for="client-email">E-mail:*</label>
-                <input type="text" class="form__input" id="client-email" name="email" value="" placeholder="kuklachev@gmail.com" required>
+                <input type="email" class="form__input" id="client-email" name="email" value="" placeholder="kuklachev@gmail.com" required>
                 <svg width="17" height="13"><use xlink:href="img/sprite.svg#icon-mail"></use></svg>
               </div>
               <div class="form__input-box form__input-box--phone">
                 <label for="client-phone">Телефон:*</label>
-                <input type="text" class="form__input" id="client-phone" name="phone" value="" placeholder="8 (960) 900-60-90" required>
+                <input type="tel" class="form__input" id="client-phone" name="phone" placeholder="8 (960) 900-60-90" pattern="[0-9]{1} [(]{1}[0-9]{3}[)]{1} [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
                 <svg width="20" height="20"><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
               </div>
             </div>
           </fieldset>
           <fieldset class="form__comment">
-            <legend class="form__legend form__legend--comment">Комментарий</legend>
+            <div class="form__legend form__legend--comment">Комментарий</div>
             <textarea id="client-comment" name="comment">Расскажите обо всех повадках кота</textarea>
           </fieldset>
           <fieldset class="form__additional">
-            <legend class="form__legend form__legend--additional">Дополнительно</legend>
+            <div class="form__legend form__legend--additional">Дополнительно</div>
             <ul class="form__additional-list">
               <li class="form__additional-item">
-                <input class="visually-hidden form__additional-input" type="checkbox" name="purpose-group" value="sugar" id="filter-sugar" checked>
+                <input class="visually-hidden form__additional-input" type="checkbox" name="additional-group" value="sugar" id="filter-sugar" checked>
                 <label for="filter-sugar">Сахарозаменитель</label>
               </li>
               <li class="form__additional-item">
-                <input class="visually-hidden form__additional-input" type="checkbox" name="purpose-group" value="water" id="filter-water">
+                <input class="visually-hidden form__additional-input" type="checkbox" name="additional-group" value="water" id="filter-water">
                 <label for="filter-water">Питьевая вода</label>
               </li>
               <li class="form__additional-item">
-                <input class="visually-hidden form__additional-input" type="checkbox" name="purpose-group" value="milk" id="filter-milk">
+                <input class="visually-hidden form__additional-input" type="checkbox" name="additional-group" value="milk" id="filter-milk">
                 <label for="filter-milk">Молоко</label>
               </li>
               <li class="form__additional-item">
-                <input class="visually-hidden form__additional-input" type="checkbox" name="purpose-group" value="vitamins" id="filter-vitamins">
+                <input class="visually-hidden form__additional-input" type="checkbox" name="additional-group" value="vitamins" id="filter-vitamins">
                 <label for="filter-vitamins">Витамины</label>
               </li>
             </ul>
           </fieldset>
           <div class="form__submit">
-            <button class="form__button" type="button">Отправить заявку</button>
+            <button class="form__button" type="submit">Отправить заявку</button>
             <p class="form__text">* — Обязательные поля</p>
           </div>
         </form>
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__contacts contacts">
-        <h3 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
-        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class = "contacts__margin">Санкт-Петербург</span></p>
-      </div>
-      <div class="page-footer__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59909062743!2d30.32165801437811!3d59.93879440981702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1587157725850!5m2!1sru!2sru" width="320" height="363" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <div class="page-footer__map-wrapper">
+        <div class="page-footer__contacts contacts">
+          <h3 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
+          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class = "contacts__margin">Санкт-Петербург</span></p>
+        </div>
+        <div id="map" class="page-footer__map"></div>
       </div>
       <div class="page-footer__wrapper">
         <a class="page-footer__logo" href="index.html">
@@ -161,15 +161,18 @@
             </li>
           </ul>
         </div>
-        <div class="page-footer__copyright copyright">
-          <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="visually-hidden">HTML Academy</span>
-            <svg width="40" height="40"><use xlink:href="img/sprite.svg#icon-htmlacademy"></use></svg>
-          </a>
-        </div>
+        <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          <p class="copyright__text">HTML Academy</p>
+          <div class="copyright__logo">
+            <svg width="40" height="40"><use xlink:href="img/sprite.svg#icon-htmlacademy"></svg>
+          </div>
+        </a>
       </div>
     </footer>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7Cvsl5hCteAnUIGuvZIK4wpNDOblTNV0&callback=initMap">
+    </script>
+    <script src="./js/initmap.js"></script>
     <script src="./js/picturefill.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/svg4everybody.min.js"></script>

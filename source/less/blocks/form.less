@@ -63,8 +63,6 @@
 .form__legend--additional {
   padding-top: 25px;
   padding-bottom: 36px;
-
-  /* .outline(red);*/
 }
 
 .form__legend--additional::after {
@@ -102,24 +100,20 @@
   line-height: 18px;
   color: @black;
 
-  border-color: #e6e6e6;
-  border-style: solid;
-  border-width: 1px;
+  border: 0;
+  outline: 1px solid #e6e6e6;
 
   &:hover {
-    border-color: #cdcdcd;
+    outline-color: #cdcdcd;
   }
 
-  &:invalid {
-    box-shadow: none;
-    border-color: #ff8282;
+  &:focus:invalid {
+    outline-color: #ff8282;
   }
 
   &:active {
-    border-width: 2px;
-    border-color: #444444;
-    padding-left: 11px;
-    padding-bottom: 1px;
+    outline-width: 2px;
+    outline-color: #444444;
   }
 
   fill: #222222;
@@ -128,7 +122,7 @@
     fill: #68b738;
   }
 
-  &:invalid ~ svg {
+  &:active:invalid ~ svg {
     fill: #ff8282;
   }
 }
@@ -157,11 +151,7 @@
   font-size: 16px;
   line-height: 18px;
   color: @black;
-  /*.outline(magenta);*/
 }
-
-/* Блоки */
-/* Контактные данные */
 
 .form__about {
   .list-reset;
@@ -169,10 +159,8 @@
 
   padding-left: 19px;
   padding-right: 20px;
-  /*временно для сетки*/
-  min-height: 186px;
 
-  /*.outline(green);*/
+  min-height: 186px;
 }
 
 .form__about label {
@@ -201,6 +189,10 @@
   border-bottom: 1px solid #ededed;
   border-left: 0;
   border-right: 0;
+}
+
+.form__purpose-item:hover label::before {
+  border-color: #bababa;
 }
 
 .form__purpose-item:active {
@@ -270,10 +262,15 @@
 }
 
 .form__input-box--email label {
-  width: 66px;
+  width: 69px;
+}
+
+.form__input-box--email input {
+  padding-right: 39px;
 }
 
 .form__input-box--phone label {
+
   width: 65px;
   padding-right: 1px;
 }
@@ -287,7 +284,6 @@
   border: 0;
   .list-reset;
 
-  /*временно для сетки*/
   min-height: 148px;
 }
 
@@ -297,7 +293,7 @@
   display: block;
 
   padding-top: 12px;
-  padding-left: 15px;
+  padding-left: 18px;
 
   min-height: 153px;
   margin: 0 auto;
@@ -308,24 +304,25 @@
   line-height: 18px;
   color: @black;
 
-  border: 1px solid #ededed;
+  border: 0;
+  outline: 1px solid #e6e6e6;
+
+  resize: none;
 
   &:hover {
-    border-color: #cdcdcd;
+    outline-color: #cdcdcd;
   }
 
   &:active {
-    border-width: 2px;
-    border-color: #444444;
+    outline-width: 2px;
+    outline-color: #444444;
   }
 }
-
 
 .form__additional {
   .list-reset;
   border: 0;
   min-height: 275px;
-  /*.outline(gray);*/
 }
 
 .form__additional-list {
@@ -371,10 +368,10 @@
 
   width: 28px;
   height: 28px;
+}
 
-  &:hover {
-    border-color: #bababa;
-  }
+.form__additional-input:hover + label::before {
+  border-color: #bababa;
 }
 
 .form__additional-input:checked + label::after {
@@ -389,7 +386,6 @@
 }
 
 .form__submit {
-  /*.outline(green);*/
   padding-bottom: 0;
 }
 
@@ -422,7 +418,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  /* заголовки и линии заголовков*/
   .form__legend {
     padding-left: 69px;
 
@@ -492,7 +487,7 @@
   .form input {
     font-size: 20px;
     line-height: 20px;
-    color: green;
+    color: @black;
   }
 
   .form__input-box {
@@ -590,7 +585,7 @@
 
   .form__contacts .form__input-box--email {
     .list-reset;
-    padding-left: 71px;
+    padding-left: 73px;
     padding-right: 65px;
     padding-bottom: 22px;
   }
@@ -611,6 +606,7 @@
 
   .form__input-box--email input {
     padding-left: 19px;
+    padding-right: 45px;
   }
 
   .form__input-box--phone input {
@@ -775,7 +771,6 @@
   .form input {
     font-size: 20px;
     line-height: 20px;
-    color: green;
   }
 
   .form__input-box--name input {

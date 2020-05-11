@@ -11,7 +11,6 @@
   .font-oswald;
   font-size: 24px;
   line-height: 24px;
-  /* .outline(orange); */
 }
 
 .additional-catalog__heading::after {
@@ -21,7 +20,6 @@
   top: 42px;
   right: 0;
 
-  /*width: 16.56%;*/
   width: calc(100% - 267px);
   height: 3px;
 
@@ -33,7 +31,6 @@
   position: relative;
 
   list-style: none;
-  /* .outline(green);*/
 }
 
 .additional-catalog__list::before {
@@ -44,7 +41,6 @@
 
   margin-left: 20px;
 
-  /*width: 87.85%;*/
   width: calc(100% - 40px);
   height: 1px;
 
@@ -66,7 +62,6 @@
 }
 
 .additional-catalog__gift {
-  /* .outline(tomato); */
   box-sizing: border-box;
 
   margin: 0 auto;
@@ -111,7 +106,6 @@
   text-align: center;
 }
 
-
 .additional-catalog td {
   font-size: 14px;
   line-height: 14px;
@@ -133,6 +127,14 @@
 
   font-size: 16px;
   line-height: 20px;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.302);
+  }
 }
 
 .additional-catalog__table {
@@ -161,7 +163,6 @@
   justify-content: flex-start;
 
   min-height: 129px;
-  /* .outline(blue); */
 }
 
 @media (min-width: @tablet-width) {
@@ -190,7 +191,6 @@
   .additional-catalog__heading::after {
     top: 87px;
 
-    /*width: 42.57%;*/
     width: calc(100% - 441px);
   }
 
@@ -200,9 +200,7 @@
 
     margin: 0 auto;
     width: 92.19%;
-    /* .outline(green); */
   }
-
 
   .additional-catalog__list::before {
     height: 0;
@@ -287,8 +285,6 @@
     min-height: 200px;
     width: 92.19%;
 
-    /* .outline(tomato); */
-
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: top center;
@@ -316,7 +312,6 @@
     font-size: 16px;
     line-height: 20px;
     text-align: left;
-    /* .outline(pink); */
   }
 }
 
@@ -387,13 +382,11 @@
 
   .additional-catalog__table td {
     text-align: left;
-    /* .outline(purple); */
   }
 
   .additional-catalog__table td:nth-child(2) {
     width: 51px;
 
-    /* .outline(purple); */
     text-align: left;
   }
 
@@ -414,7 +407,6 @@
       background-image: url("../img/gift-photo-desktop@2x.jpg");
       background-size: 708px auto;
     }
-    /* .outline(tomato);*/
   }
 
   .additional-catalog__gift svg {
@@ -437,8 +429,6 @@
 
     width: 1220px;
     min-height: 375px;
-
-    /* .outline(blue); */
   }
 
   .additional-catalog__title {

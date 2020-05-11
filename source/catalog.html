@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="./css/style-min.css" rel="stylesheet">
+
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="css/style-min.css" as="style">
+    <link href="css/style-min.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -309,12 +312,12 @@
 
     </main>
     <footer class="page-footer">
-      <div class="page-footer__contacts contacts">
-        <h3 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
-        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class = "contacts__margin">Санкт-Петербург</span></p>
-      </div>
-      <div class="page-footer__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59909062743!2d30.32165801437811!3d59.93879440981702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1587157725850!5m2!1sru!2sru" width="320" height="363" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <div class="page-footer__map-wrapper">
+        <div class="page-footer__contacts contacts">
+          <h3 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
+          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class = "contacts__margin">Санкт-Петербург</span></p>
+        </div>
+        <div id="map" class="page-footer__map"></div>
       </div>
       <div class="page-footer__wrapper">
         <a class="page-footer__logo" href="index.html">
@@ -342,15 +345,18 @@
             </li>
           </ul>
         </div>
-        <div class="page-footer__copyright copyright">
-          <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="visually-hidden">HTML Academy</span>
-            <svg width="40" height="40"><use xlink:href="img/sprite.svg#icon-htmlacademy"></use></svg>
-          </a>
-        </div>
+        <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          <p class="copyright__text">HTML Academy</p>
+          <div class="copyright__logo">
+            <svg width="40" height="40"><use xlink:href="img/sprite.svg#icon-htmlacademy"></svg>
+          </div>
+        </a>
       </div>
     </footer>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7Cvsl5hCteAnUIGuvZIK4wpNDOblTNV0&callback=initMap">
+    </script>
+    <script src="./js/initmap.js"></script>
     <script src="./js/picturefill.min.js" async></script>
     <script src="./js/script.js"></script>
     <script src="./js/svg4everybody.min.js"></script>
