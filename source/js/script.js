@@ -7,11 +7,12 @@ var closedClass = 'main-nav--closed';
 navMain.classList.remove('main-nav--nojs');
 
 navToggle.addEventListener('click', function() {
-  if (navMain.classList.contains(openedClass)) {
-    navMain.classList.remove(openedClass);
-    navMain.classList.add(closedClass); }
-  else {
-    navMain.classList.remove(closedClass);
-    navMain.classList.add(openedClass);
-  }
+if (navMain.classList.contains(closedClass)) {
+navMain.classList.remove(closedClass);
+navMain.classList.add(openedClass);
+}
+else {
+navMain.classList.remove(openedClass);
+navMain.classList.add(closedClass);
+}
 });
