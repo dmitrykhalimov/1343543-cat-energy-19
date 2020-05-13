@@ -30,9 +30,6 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(purgecss({
-      content: ['source/*.html']
-    }))
     .pipe(csso())
     .pipe(rename("style-min.css"))
     .pipe(sourcemap.write("."))
