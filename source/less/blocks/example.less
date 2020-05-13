@@ -206,7 +206,6 @@
 @media (min-width: @tablet-width) {
   .example {
     background-color: @white;
-
   }
 
   .example__title {
@@ -347,7 +346,7 @@
     box-shadow: 0 2px 4px -1px #34495e;
   }
 
- .example__slider:active::after {
+  .example__slider:active::after {
     box-shadow: 0 0 0 1px #68b738,
       0 2px 3px 0 #34495e;
   }
@@ -358,10 +357,11 @@
     padding-bottom: 8px;
     border-bottom: 1px dotted gray;
 
-    &:hover{
+    &:hover {
       border-bottom: 1px solid gray;
     }
-    &:active{
+
+    &:active {
       border-bottom: 0;
     }
   }
