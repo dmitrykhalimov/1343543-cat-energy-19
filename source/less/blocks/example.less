@@ -225,7 +225,7 @@
     flex-wrap: wrap;
 
     width: 92.19%;
-    min-height: 264px;
+    min-height: 259px;
 
     padding-bottom: 230px;
   }
@@ -256,6 +256,8 @@
 
     width: 160px;
     height: 57px;
+
+    margin-top: 28px;
   }
 
   .example__result-num {
@@ -312,7 +314,8 @@
 
   .example__slider-block {
     margin: 0 auto;
-    padding-top: 362px;
+    padding-top: 366px;
+    padding-bottom: 68px;
 
     width: 570px;
   }
@@ -339,11 +342,11 @@
     box-shadow: 0 0 3px 0 #34495e;
   }
 
-  .example__slider-block:hover .example__slider::after {
+  .example__slider:hover::after {
     box-shadow: 0 2px 4px -1px #34495e;
   }
 
-  .example__slider-block:active .example__slider::after {
+  .example__slider:active::after {
     box-shadow: 0 0 0 1px #68b738,
       0 2px 3px 0 #34495e;
   }
@@ -353,14 +356,14 @@
     line-height: 20px;
     padding-bottom: 8px;
     border-bottom: 1px dotted gray;
-  }
 
-  .example__slider-block:hover .example__catchange-text {
-    border-bottom: 1px solid gray;
-  }
+    &:hover {
+      border-bottom: 1px solid gray;
+    }
 
-  .example__slider-block:active .example__catchange-text {
-    border-bottom: 0;
+    &:active {
+      border-bottom: 0;
+    }
   }
 }
 
@@ -442,7 +445,7 @@
   }
 
   .example__catchange {
-    width: 700px;
+    width: 730px;
   }
 
   .example__catchange img {
@@ -455,7 +458,7 @@
   }
 
   .example__slider-block {
-    margin-top: 3px;
+    margin-top: 0;
     margin-right: 0;
   }
 }
