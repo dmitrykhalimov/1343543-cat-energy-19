@@ -19,7 +19,7 @@
             <img src="./img/logo-mobile.svg" width="193" height="53" alt="Интернет-магазин «Кэт энерджи»">
           </picture>
         </a>
-      <nav class="main-nav main-nav--opened main-nav--nojs">
+      <nav class="main-nav main-nav--closed main-nav--no1js">
         <div class="main-nav__wrapper">
           <button class="main-nav__toggle-menu" type="button"></button>
           <ul class="main-nav__list site-list site-list--main">
@@ -184,13 +184,11 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7Cvsl5hCteAnUIGuvZIK4wpNDOblTNV0&callback=initMap">
     </script>
-  <!-- <script src="./js/initmap.js"></script> -->
+    <script src="./js/initmap.js"></script>
     <script src="./js/picturefill.min.js" async></script>
     <script src="./js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
-
     <script>
-
       var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle-menu');
 
@@ -198,17 +196,17 @@ var openedClass = 'main-nav--opened';
 var closedClass = 'main-nav--closed';
 
 navMain.classList.remove('main-nav--nojs');
-/*
-navToggle.addEventListener('click', function() {
-  if (navMain.classList.contains(openedClass)) {
-    navMain.classList.remove(openedClass);
-    navMain.classList.add(closedClass); }
-  else {
-    navMain.classList.remove(closedClass);
-    navMain.classList.add(openedClass);
-  }
-})*/;
 
-    </script> -->
+navToggle.addEventListener('click', function() {
+if (navMain.classList.contains(closedClass)) {
+navMain.classList.remove(closedClass);
+navMain.classList.add(openedClass);
+}
+else {
+navMain.classList.remove(openedClass);
+navMain.classList.add(closedClass);
+}
+});
+    </script>
   </body>
 </html>
