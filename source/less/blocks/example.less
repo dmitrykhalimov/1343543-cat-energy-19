@@ -329,7 +329,12 @@
 
   .example__slider:focus.example__slider::after {
     outline: 1px dotted #212121;
-    outline: 5px auto -webkit-focus-ring-color;
+  }
+
+  @media (min-resolution: 1dppx) {
+    .example__slider:focus.example__slider::after {
+      outline: 5px auto -webkit-focus-ring-color;
+    }
   }
 
   .example__slider::before {

@@ -246,10 +246,16 @@
   border-radius: 50px;
 }
 
-.form__purpose-input:focus + label:before {
+.form__purpose-input:focus + label::before {
   outline: 1px dotted #212121;
-  outline: 5px auto -webkit-focus-ring-color;
 }
+
+@media (min-resolution: 1dppx) {
+  .form__purpose-input:focus + label::before {
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+}
+
 
 .form__purpose-list {
   .list-reset;
@@ -354,7 +360,7 @@
   padding-left: 20px;
 }
 
-.form__additional-item label:active{
+.form__additional-item label:active {
   opacity: 0.3;
 }
 
@@ -402,7 +408,12 @@
 
 .form__additional-input:focus + label::before {
   outline: 1px dotted #212121;
-  outline: 5px auto -webkit-focus-ring-color;
+}
+
+@media (min-resolution: 1dppx) {
+  .form__additional-input:focus + label::before {
+    outline: 5px auto -webkit-focus-ring-color;
+  }
 }
 
 .form__submit {
