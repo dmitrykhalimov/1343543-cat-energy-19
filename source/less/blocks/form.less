@@ -116,6 +116,11 @@
     outline-color: #444444;
   }
 
+  &:focus {
+    outline-width: 2px;
+    outline-color: #444444;
+  }
+
   fill: #222222;
 
   &:active + svg {
@@ -195,7 +200,7 @@
   border-color: #bababa;
 }
 
-.form__purpose-item:active {
+.form__purpose-item label:active {
   opacity: 0.3;
 }
 
@@ -240,6 +245,17 @@
   background-color: #68b738;
   border-radius: 50px;
 }
+
+.form__purpose-input:focus + label::before {
+  outline: 1px dotted #212121;
+}
+
+@media (min-resolution: 1dppx) {
+  .form__purpose-input:focus + label::before {
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+}
+
 
 .form__purpose-list {
   .list-reset;
@@ -317,6 +333,11 @@
     outline-width: 2px;
     outline-color: #444444;
   }
+
+  &:focus {
+    outline-width: 2px;
+    outline-color: #444444;
+  }
 }
 
 .form__additional {
@@ -337,10 +358,10 @@
 
   margin-bottom: 10px;
   padding-left: 20px;
+}
 
-  &:active {
-    opacity: 0.3;
-  }
+.form__additional-item label:active {
+  opacity: 0.3;
 }
 
 .form__additional-item label {
@@ -383,6 +404,16 @@
   width: 21px;
   height: 16px;
   background: url("../img/icon-tick.svg") 0 0 no-repeat;
+}
+
+.form__additional-input:focus + label::before {
+  outline: 1px dotted #212121;
+}
+
+@media (min-resolution: 1dppx) {
+  .form__additional-input:focus + label::before {
+    outline: 5px auto -webkit-focus-ring-color;
+  }
 }
 
 .form__submit {
@@ -705,7 +736,7 @@
   /* заголовки и линии заголовков*/
 
   .form__legend {
-    position: initial;
+    position: static;
     padding-left: 0;
     width: 1220px;
     margin: 0 auto;
@@ -837,7 +868,7 @@
   .form__contacts {
     position: relative;
 
-    min-height: unset;
+    min-height: 0;
 
     padding-bottom: 45px;
     margin-right: auto;
@@ -896,7 +927,7 @@
   }
 
   .form__additional {
-    min-height: unset;
+    min-height: 0;
     position: relative;
   }
 
