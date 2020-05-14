@@ -116,6 +116,11 @@
     outline-color: #444444;
   }
 
+  &:focus {
+    outline-width: 2px;
+    outline-color: #444444;
+  }
+
   fill: #222222;
 
   &:active + svg {
@@ -241,6 +246,11 @@
   border-radius: 50px;
 }
 
+.form__purpose-input:focus + label:before {
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 .form__purpose-list {
   .list-reset;
   list-style: none;
@@ -317,6 +327,11 @@
     outline-width: 2px;
     outline-color: #444444;
   }
+
+  &:focus {
+    outline-width: 2px;
+    outline-color: #444444;
+  }
 }
 
 .form__additional {
@@ -383,6 +398,11 @@
   width: 21px;
   height: 16px;
   background: url("../img/icon-tick.svg") 0 0 no-repeat;
+}
+
+.form__additional-input:focus + label::before {
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .form__submit {
