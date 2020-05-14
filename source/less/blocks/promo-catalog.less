@@ -37,15 +37,12 @@
   top: 20px;
   left: 108px;
   fill: #111111;
-
-  clip-path: polygon(25% 0, 100% 0, 100% 100%, 25% 100%);
-  transition-property: transform, clip-path;
-  transition-duration: 0.3s, 0.3s;
+  transition-property: transform;
+  transition-duration: 0.5s;
 }
 
 .promo-catalog__link:hover svg {
-  transform: translateX(7.6px);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transform: translateX(7px);
 }
 
 .promo-catalog__link:active {
@@ -129,6 +126,18 @@
 
   font-size: 16px;
   line-height: 16px;
+}
+
+.promo-catalog__link::after {
+  content: "";
+  position: absolute;
+  left: 107px;
+  top: 20px;
+
+  width: 8px;
+  height: 20px;
+
+  background-color: @lightgray;
 }
 
 .promo-catalog__description {
@@ -241,6 +250,14 @@
     font-size: 20px;
     line-height: 20px;
   }
+  .promo-catalog__link::after {
+    left: 174px;
+    top: 38px;
+  }
+
+  .promo-catalog__item:nth-child(2) .promo-catalog__link::after {
+    left: 169px;
+  }
 
   .promo-catalog__link svg {
     top: 40px;
@@ -283,6 +300,10 @@
 
   .promo-catalog__link {
     padding-top: 4px;
+  }
+
+  .promo-catalog__link::after {
+    top: 6px;
   }
 
   .promo-catalog__link svg {
