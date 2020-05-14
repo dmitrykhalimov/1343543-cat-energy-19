@@ -323,6 +323,15 @@
     width: 570px;
   }
 
+  .example__slider:focus {
+    outline: 0;
+  }
+
+  .example__slider:focus.example__slider::after {
+    outline: 1px dotted #212121;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+
   .example__slider::before {
     margin-bottom: 2px;
 
