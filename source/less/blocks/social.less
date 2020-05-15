@@ -38,10 +38,16 @@
   &:hover {
     fill: #68b738;
   }
+}
 
-  &:active {
-    opacity: 0.3;
-  }
+/*добавлено для совеместимости с IE11*/
+
+.social__link svg:active  {
+  opacity: 0.3;
+}
+
+.social__link:active svg {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
